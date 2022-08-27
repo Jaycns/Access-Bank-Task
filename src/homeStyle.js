@@ -128,7 +128,7 @@ export const Button = styled.button`
     color: #f5821f;
   }
   @media (max-width: 768px) {
-    padding: 0.4rem 0.8rem;
+    padding: 0.6rem 0.8rem;
     font-size: 11px;
     letter-spacing: 2px;
   }
@@ -381,6 +381,19 @@ export const ModalBox = styled.div`
     gap: 2rem;
     margin-top: 2rem;
   }
+  @media (max-width: 768px) {
+    width: 26rem;
+    padding: 1.4rem;
+    transform: translate(0%, 20%);
+    img {
+      width: 100px;
+    }
+    h1 {
+      font-size: 24px;
+      font-weight: 300;
+      opacity: 0.8;
+    }
+  }
 `;
 export const InputBox = styled.div`
   display: flex;
@@ -431,6 +444,14 @@ export const InputBox = styled.div`
     font-weight: 300;
     color: rgba(0, 0, 0, 0.3);
   }
+  @media (max-width: 768px) {
+    label {
+      font-size: 12px;
+    }
+    & div {
+      gap: 0.6rem;
+    }
+  }
 `;
 export const CheckBox = styled.div`
   display: flex;
@@ -441,6 +462,12 @@ export const CheckBox = styled.div`
     opacity: 0.9;
     span {
       color: #f5821f;
+    }
+  }
+  @media (max-width: 768px) {
+    p {
+      font-size: 13px;
+      font-weight: 300;
     }
   }
 `;
