@@ -23,6 +23,7 @@ import first from "../images/first.svg";
 import second from "../images/second.svg";
 import third from "../images/third.svg";
 
+const initialSideBarShow = window.matchMedia("(max-width: 780px)").matches;
 function Home({ handleOpen }) {
   const [topNav, setTopNav] = useState(false);
   const [carousel, setCarousel] = useState(0);
@@ -48,6 +49,7 @@ function Home({ handleOpen }) {
         setCarousel(0);
       }
     }, 50000);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
     <div className="home">
@@ -114,7 +116,11 @@ function Home({ handleOpen }) {
               <br />
               complement your imagination.
             </p>
-            <Button bd="40px" width="12rem" onClick={handleOpen}>
+            <Button
+              bd="40px"
+              width={initialSideBarShow ? "8rem" : "12rem"}
+              onClick={handleOpen}
+            >
               Join us
             </Button>
           </Main>
@@ -189,7 +195,12 @@ function Home({ handleOpen }) {
       </ThirdSection>
       <LastSection>
         Start integrating with our APIs now and grow your business
-        <Button bg="#10295F" bd="40px" width="12rem" onClick={handleOpen}>
+        <Button
+          bg="#10295F"
+          bd="40px"
+          width={initialSideBarShow ? "8rem" : "12rem"}
+          onClick={handleOpen}
+        >
           Join us
         </Button>
       </LastSection>

@@ -52,7 +52,7 @@ export const TopNav = styled.div`
   @media (max-width: 768px) {
     img {
       width: 100px;
-      height: 40px;
+      height: 35px;
     }
   }
 `;
@@ -101,6 +101,14 @@ export const ButtonGroup = styled.div`
       color: #f5821f;
     }
   }
+  @media (max-width: 768px) {
+    gap: 0.8rem;
+    a {
+      display: none;
+      font-size: 11px;
+      letter-spacing: 2px;
+    }
+  }
 `;
 
 export const Button = styled.button`
@@ -118,6 +126,11 @@ export const Button = styled.button`
   &:hover {
     background: transparent;
     color: #f5821f;
+  }
+  @media (max-width: 768px) {
+    padding: 0.4rem 0.8rem;
+    font-size: 11px;
+    letter-spacing: 2px;
   }
 `;
 
@@ -173,16 +186,14 @@ export const Main = styled.main`
   @media (max-width: 768px) {
     h1 {
       font-size: 32px;
-      height: 54px;
-
+      height: 60px;
     }
     .text {
-      gap: 0.5rem;
-      margin-bottom: -0.5rem;
+      height: 35px;
     }
     p {
-      font-size: 16px;
-     
+      font-size: 14px;
+      font-weight: 200;
     }
   }
 `;
@@ -194,6 +205,11 @@ export const SecondSection = styled.section`
   .flex-box {
     display: flex;
     gap: 1.2rem;
+  }
+  @media (max-width: 768px) {
+    .flex-box {
+      flex-direction: column;
+    }
   }
 `;
 export const Card = styled.div`
@@ -222,6 +238,17 @@ export const Card = styled.div`
     font-weight: 300;
     font-size: 16px;
     opacity: 0.7;
+  }
+  @media (max-width: 768px) {
+    h1 {
+      font-weight: 300;
+      font-size: 28px;
+    }
+    p {
+      font-weight: 200;
+      opacity: 0.8;
+      font-size: 13px;
+    }
   }
 `;
 export const ThirdSection = styled.section`
@@ -264,6 +291,30 @@ export const ThirdSection = styled.section`
       opacity: 0.8;
     }
   }
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 24px;
+      letter-spacing: 2px;
+    }
+    .holder {
+      h2 {
+        font-size: 24px;
+        font-weight: 300;
+        opacity: 0.8;
+      }
+      p {
+        font-size: 13px;
+        font-weight: 200;
+        opacity: 0.9;
+      }
+    }
+    img {
+      width: 60px;
+    }
+    .flex-box {
+      flex-direction: column;
+    }
+  }
 `;
 export const LastSection = styled.section`
   background-color: #f5821f;
@@ -282,6 +333,11 @@ export const LastSection = styled.section`
       color: #10295f;
     }
   }
+  @media (max-width: 768px) {
+    font-size: 24px;
+    padding: 2rem;
+    text-align: center;
+  }
 `;
 export const Footer = styled.footer`
   background-color: #10295f;
@@ -292,6 +348,12 @@ export const Footer = styled.footer`
   height: 20vh;
   img {
     width: 160px;
+  }
+  @media (max-width: 768px) {
+    height: 12vh;
+    img {
+      width: 100px;
+    }
   }
 `;
 export const ModalBox = styled.div`

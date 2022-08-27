@@ -7,7 +7,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
   padding: 0;
 }
-
+::-webkit-scrollbar {
+  width: 0;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -23,7 +25,6 @@ html {
 .header.active {
   background-color: #040b1b;
   box-shadow: 0 0 0.2em rgba(0, 0, 0, 0.5);
-  
 }
 
 h1,
