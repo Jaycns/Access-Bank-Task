@@ -49,10 +49,22 @@ export const TopNav = styled.div`
     width: 160px;
     height: 57px;
   }
+  @media (max-width: 1300px) {
+    img {
+      width: 100px;
+      height: 38px;
+    }
+  }
   @media (max-width: 768px) {
     img {
       width: 100px;
       height: 35px;
+    }
+  }
+  @media (max-width: 328px) {
+    img {
+      width: 70px;
+      height: 25px;
     }
   }
 `;
@@ -79,6 +91,14 @@ export const Nav = styled.div`
       color: #f5821f;
     }
   }
+  @media (max-width: 1300px) {
+    gap: 1.2rem;
+    a {
+      font-size: 12px;
+      height: 20px;
+      letter-spacing: 2px;
+    }
+  }
   @media (max-width: 768px) {
     display: none;
   }
@@ -101,6 +121,12 @@ export const ButtonGroup = styled.div`
       color: #f5821f;
     }
   }
+  @media (max-width: 1300px) {
+    gap: 1rem;
+    a {
+      font-size: 11px;
+    }
+  }
   @media (max-width: 768px) {
     gap: 0.8rem;
     a {
@@ -113,9 +139,8 @@ export const ButtonGroup = styled.div`
 
 export const Button = styled.button`
   outline: none;
-  border: ${({ outline }) => outline || "none"};
   background: ${({ bg }) => bg || "#f5821f"};
-  border-radius: ${({ bd }) => bd || "10px"};
+  border-radius: ${({ bd }) => bd || "5px"};
   color: white;
   letter-spacing: 4px;
   text-transform: uppercase;
@@ -127,10 +152,18 @@ export const Button = styled.button`
     background: transparent;
     color: #f5821f;
   }
+  @media (max-width: 1300px) {
+    font-size: 11px;
+    letter-spacing: 2px;
+    padding: 0.6rem 1rem;
+  }
   @media (max-width: 768px) {
     padding: 0.6rem 0.8rem;
     font-size: 11px;
     letter-spacing: 2px;
+  }
+  @media (max-width: 328px) {
+    font-size: 8px;
   }
 `;
 
@@ -183,7 +216,21 @@ export const Main = styled.main`
     margin: 1.6rem;
     text-decoration: none;
   }
+  @media (max-width: 1300px) {
+    h1 {
+      font-size: 36px;
+      height: 40px;
+    }
+    .text {
+      height: 35px;
+    }
+    p {
+      font-size: 14px;
+      font-weight: 200;
+    }
+  }
   @media (max-width: 768px) {
+    width: 100%;
     h1 {
       font-size: 32px;
       height: 60px;
@@ -205,6 +252,12 @@ export const SecondSection = styled.section`
   .flex-box {
     display: flex;
     gap: 1.2rem;
+  }
+  @media (max-width: 1300px) {
+    .flex-box {
+      display: grid;
+      grid-template-columns: auto auto;
+    }
   }
   @media (max-width: 768px) {
     .flex-box {
@@ -238,6 +291,16 @@ export const Card = styled.div`
     font-weight: 300;
     font-size: 16px;
     opacity: 0.7;
+  }
+  @media (max-width: 1300px) {
+    h1 {
+      font-size: 30px;
+    }
+    p {
+      font-weight: 200;
+      opacity: 0.8;
+      font-size: 15px;
+    }
   }
   @media (max-width: 768px) {
     h1 {
@@ -291,6 +354,27 @@ export const ThirdSection = styled.section`
       opacity: 0.8;
     }
   }
+  @media (max-width: 1300px) {
+    h1 {
+      font-size: 28px;
+      letter-spacing: 2.5px;
+    }
+    .holder {
+      h2 {
+        font-size: 28px;
+        font-weight: 300;
+        opacity: 0.8;
+      }
+      p {
+        font-size: 15px;
+        font-weight: 200;
+        opacity: 0.9;
+      }
+    }
+    img {
+      width: 100px;
+    }
+  }
   @media (max-width: 768px) {
     h1 {
       font-size: 24px;
@@ -333,8 +417,12 @@ export const LastSection = styled.section`
       color: #10295f;
     }
   }
-  @media (max-width: 768px) {
+  @media (max-width: 1300px) {
+    text-align: center;
     font-size: 24px;
+  }
+  @media (max-width: 768px) {
+    font-size: 18px;
     padding: 2rem;
     text-align: center;
   }
@@ -349,10 +437,22 @@ export const Footer = styled.footer`
   img {
     width: 160px;
   }
+  @media (max-width: 1300px) {
+    height: 15vh;
+    img {
+      width: 120px;
+    }
+  }
   @media (max-width: 768px) {
     height: 12vh;
     img {
       width: 100px;
+    }
+  }
+  @media (max-width: 328px) {
+    img {
+      width: 70px;
+      height: 25px;
     }
   }
 `;
@@ -381,10 +481,23 @@ export const ModalBox = styled.div`
     gap: 2rem;
     margin-top: 2rem;
   }
-  @media (max-width: 768px) {
-    width: 26rem;
+  @media (max-width: 1300px) {
     padding: 1.4rem;
-    transform: translate(0%, 20%);
+    transform: translate(0%, 10%);
+    width: 100%;
+    img {
+      width: 100px;
+    }
+    h1 {
+      font-size: 24px;
+      font-weight: 300;
+      opacity: 0.8;
+    }
+  }
+  @media (max-width: 768px) {
+    width: 100%;
+    padding: 1.4rem;
+    transform: translate(0%, 10%);
     img {
       width: 100px;
     }
@@ -444,12 +557,27 @@ export const InputBox = styled.div`
     font-weight: 300;
     color: rgba(0, 0, 0, 0.3);
   }
+  @media (max-width: 1300px) {
+    display: grid;
+    grid-template-columns: auto auto;
+    label {
+      font-size: 12px;
+      letter-spacing: 1.5px;
+    }
+    & div {
+      gap: 0.6rem;
+    }
+  }
   @media (max-width: 768px) {
     label {
       font-size: 12px;
     }
     & div {
       gap: 0.6rem;
+    }
+    input,
+    select {
+      width: 80%;
     }
   }
 `;
@@ -462,6 +590,12 @@ export const CheckBox = styled.div`
     opacity: 0.9;
     span {
       color: #f5821f;
+    }
+  }
+  @media (max-width: 1300px) {
+    p {
+      font-size: 14px;
+      font-weight: 300;
     }
   }
   @media (max-width: 768px) {

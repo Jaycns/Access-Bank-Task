@@ -24,6 +24,7 @@ import second from "../images/second.svg";
 import third from "../images/third.svg";
 
 const initialSideBarShow = window.matchMedia("(max-width: 780px)").matches;
+const Show = window.matchMedia("(max-width: 1300px)").matches;
 function Home({ handleOpen }) {
   const [topNav, setTopNav] = useState(false);
   const [carousel, setCarousel] = useState(0);
@@ -45,10 +46,16 @@ function Home({ handleOpen }) {
     setInterval(() => {
       if (carousel === 0) {
         setCarousel(1);
-      } else {
+      }
+    }, 40000);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+  useEffect(() => {
+    setInterval(() => {
+      if (carousel === 1) {
         setCarousel(0);
       }
-    }, 50000);
+    }, 40000);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
@@ -67,7 +74,9 @@ function Home({ handleOpen }) {
             </Nav>
             <ButtonGroup>
               <a href="/">Sign in</a>
-              <Button onClick={handleOpen}>Get Access</Button>
+              <Button  onClick={handleOpen}>
+                Get Access
+              </Button>
             </ButtonGroup>
           </TopNav>
           <Main>
@@ -79,7 +88,11 @@ function Home({ handleOpen }) {
               <br />
               fintechs and software developers in Africa and beyond.
             </p>
-            <Button bd="40px" width="12rem" onClick={handleOpen}>
+            <Button
+              bd="40px"
+              width={initialSideBarShow ? "8rem" : Show ? "9rem" : "12rem"}
+              onClick={handleOpen}
+            >
               Get Access
             </Button>
           </Main>
@@ -102,7 +115,9 @@ function Home({ handleOpen }) {
             </Nav>
             <ButtonGroup>
               <a href="/">Sign in</a>
-              <Button onClick={handleOpen}>Get Access</Button>
+              <Button bd={Show ? "5px" : ""} onClick={handleOpen}>
+                Get Access
+              </Button>
             </ButtonGroup>
           </TopNav>
           <Main>
@@ -118,7 +133,7 @@ function Home({ handleOpen }) {
             </p>
             <Button
               bd="40px"
-              width={initialSideBarShow ? "8rem" : "12rem"}
+              width={initialSideBarShow ? "8rem" : Show ? "9rem" : "12rem"}
               onClick={handleOpen}
             >
               Join us
@@ -198,7 +213,7 @@ function Home({ handleOpen }) {
         <Button
           bg="#10295F"
           bd="40px"
-          width={initialSideBarShow ? "8rem" : "12rem"}
+          width={initialSideBarShow ? "7rem" : Show ? "8rem" : "12rem"}
           onClick={handleOpen}
         >
           Join us
