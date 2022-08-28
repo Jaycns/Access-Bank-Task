@@ -479,8 +479,8 @@ export const ModalBox = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2rem;
-    margin-top: 2rem;
+    gap: 1rem;
+    margin-top: 1rem;
   }
   @media (max-width: 1300px) {
     padding: 1.4rem;
@@ -498,12 +498,14 @@ export const ModalBox = styled.div`
   @media (max-width: 768px) {
     width: 100%;
     padding: 1.4rem;
-    transform: translate(0%, 10%);
+    transform: translate(0%, 8%);
+    min-height: 50vh;
     img {
-      width: 100px;
+      width: 80px;
     }
     h1 {
-      font-size: 24px;
+      font-size: 20px;
+      margin-top: 10px;
       font-weight: 300;
       opacity: 0.8;
     }
@@ -572,11 +574,15 @@ export const InputBox = styled.div`
   @media (max-width: 768px) {
     display: flex;
     flex-direction: column;
+    padding: 0rem 0.5rem;
+    margin-top: 10px;
+    gap: 0.6rem;
     label {
       font-size: 12px;
+      letter-spacing: 1px;
     }
     & div {
-      gap: 0.6rem;
+      gap: 0.4rem;
     }
     input,
     select {
@@ -603,7 +609,7 @@ export const CheckBox = styled.div`
   }
   @media (max-width: 768px) {
     p {
-      font-size: 13px;
+      font-size: 11px;
       font-weight: 300;
     }
   }
