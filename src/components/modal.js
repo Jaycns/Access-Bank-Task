@@ -2,7 +2,7 @@ import React from "react";
 import Logo from "../images/logo_2.png";
 import { ModalBox, InputBox, CheckBox, Button } from "../homeStyle";
 
-function SignupModal() {
+function SignupModal({ onClose }) {
   return (
     <ModalBox>
       <img src={Logo} alt="Logo" />
@@ -53,7 +53,7 @@ function SignupModal() {
               I agree to the <span>Terms</span> and <span>Conditions</span>
             </p>
           </CheckBox>
-          <Button className="btn" width="150px" bd="20px">
+          <Button className="btn" width="150px" bd="20px" onClick={onClose}>
             Submit
           </Button>
         </div>

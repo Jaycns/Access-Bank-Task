@@ -13,7 +13,7 @@ function App() {
     console.log("offsetHeight: ", event.target.offsetHeight);
   };
   return (
-    <div className="App" onScroll={handleScroll} >
+    <div className="App" onScroll={handleScroll}>
       <Home handleOpen={handleOpen} />
       <Modal
         open={modal}
@@ -22,7 +22,7 @@ function App() {
         aria-describedby="modal-modal-description"
       >
         <div>
-          <SignUpModal />
+          <SignUpModal onClose={handleClose} />
         </div>
       </Modal>
     </div>
