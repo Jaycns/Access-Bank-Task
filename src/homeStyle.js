@@ -261,6 +261,7 @@ export const SecondSection = styled.section`
   }
   @media (max-width: 768px) {
     .flex-box {
+      display: flex;
       flex-direction: column;
     }
   }
@@ -569,6 +570,8 @@ export const InputBox = styled.div`
     }
   }
   @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
     label {
       font-size: 12px;
     }
