@@ -95,7 +95,7 @@ export const Nav = styled.div`
     gap: 1.2rem;
     a {
       font-size: 12px;
-      height: 20px;
+      height: 28px;
       letter-spacing: 2px;
     }
   }

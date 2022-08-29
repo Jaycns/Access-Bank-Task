@@ -8,12 +8,8 @@ function App() {
   const [modal, setModal] = useState(false);
   const handleOpen = () => setModal(true);
   const handleClose = () => setModal(false);
-  const handleScroll = (event) => {
-    console.log("scrollTop: ", event.target.scrollTop);
-    console.log("offsetHeight: ", event.target.offsetHeight);
-  };
   return (
-    <div className="App" onScroll={handleScroll}>
+    <div className="App">
       <Home handleOpen={handleOpen} />
       <Modal
         open={modal}
