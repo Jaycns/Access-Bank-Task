@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import "../App.scss";
 import {
   FirstSection,
   TopNav,
@@ -13,6 +14,7 @@ import {
   Card,
   Footer,
 } from "../homeStyle.js";
+import { ApiSection, ApiCard } from "../homeStyle2";
 import Logo from "../images/logo.png";
 import Background from "../images/background.png";
 import One from "../images/one.svg";
@@ -22,6 +24,13 @@ import Four from "../images/four.svg";
 import first from "../images/first.svg";
 import second from "../images/second.svg";
 import third from "../images/third.svg";
+import logobg from "../images/Union.svg";
+import mbox from "../images/mbox.svg";
+import Inq from "../images/Inq.png";
+import Auth from "../images/authenticate.png";
+import Tranx from "../images/tranx.png";
+import Partners from "../images/partners.png";
+import { AiOutlineRightCircle } from "react-icons/ai";
 
 const initialSideBarShow = window.matchMedia("(max-width: 780px)").matches;
 const Show = window.matchMedia("(max-width: 1300px)").matches;
@@ -74,11 +83,12 @@ function Home({ handleOpen }) {
             </Nav>
             <ButtonGroup>
               <a href="/">Sign in</a>
-              <Button  onClick={handleOpen}>
-                Get Access
-              </Button>
+              <Button onClick={handleOpen}>Get Access</Button>
             </ButtonGroup>
           </TopNav>
+
+          <img className="logobg" src={logobg} alt="bg" />
+          <img className="mbox" src={mbox} alt="mbox" />
           <Main>
             <h1>
               Developer API <span>Portal</span>
@@ -120,6 +130,10 @@ function Home({ handleOpen }) {
               </Button>
             </ButtonGroup>
           </TopNav>
+
+          <img className="logobg" src={logobg} alt="bg" />
+          <img className="mbox" src={mbox} alt="mbox" />
+
           <Main>
             <h1 className="text">
               <span>Grow</span>
@@ -146,46 +160,83 @@ function Home({ handleOpen }) {
         </FirstSection>
       )}
       <SecondSection>
+        <h1 className="header">What to expect</h1>
         <div className="flex-box">
           <Card>
             <img src={One} alt="one" />
             <h1>Payment Initiation</h1>
             <p>
-              Deliver an easier banking experience. Send payment
-              <br /> instructions in real-time from mobile devices or Enterprise
-              Resources Planning Systems
+              Make and complete payments; cross border interbank
+              <br /> and intrabank transfers
             </p>
           </Card>
           <Card>
             <img src={Two} alt="Two" />
             <h1>Balance Inquiries</h1>
             <p>
-              Deliver an easier banking experience. Send payment
-              <br />
-              instructions in real-time from mobile devices or Enterprise
-              Resources Planning Systems
+              Check your account balance and self generate bank <br />
+              statements
             </p>
           </Card>
           <Card>
             <img src={Three} alt="Three" />
             <h1>Transaction Inquiries</h1>
             <p>
-              Deliver an easier banking experience. Send payment <br />
-              instructions in real-time from mobile devices or Enterprise
-              Resources Planning Systems
+              View your transactions and send payment avidence to <br />
+              vendors and merchants
             </p>
           </Card>
           <Card>
             <img src={Four} alt="four" />
-            <h1>Funds Check</h1>
+            <h1>Payment Reception</h1>
             <p>
-              Deliver an easier banking experience. Send payment <br />
-              instructions in real-time from mobile devices or Enterprise
-              Resources Planning Systems
+              Create a merchant profile and receive payments via <br />
+              AccessPay
             </p>
           </Card>
         </div>
       </SecondSection>
+      <ApiSection>
+        <h1 className="header">Api Categories</h1>
+        <div className="flex-box">
+          <ApiCard className="card">
+            <img src={Inq} alt="inq" />
+            <div className="textbox">
+              <p>Inquiries</p>
+              <div className="span">
+                <AiOutlineRightCircle className="icon" /> <p>Learn More</p>
+              </div>
+            </div>
+          </ApiCard>
+          <ApiCard className="card">
+            <img src={Auth} alt="auth" />
+            <div className="textbox">
+              <p>Authentication</p>
+              <div className="span">
+                <AiOutlineRightCircle className="icon" /> <p>Learn More</p>
+              </div>
+            </div>
+          </ApiCard>
+          <ApiCard className="card">
+            <img src={Partners} alt="tranx" className="tranx" />
+            <div className="textbox">
+              <p>Partners</p>
+              <div className="span">
+                <AiOutlineRightCircle className="icon" /> <p>Learn More</p>
+              </div>
+            </div>
+          </ApiCard>
+          <ApiCard className="card">
+            <img src={Tranx} alt="tranx" className="tranx" />
+            <div className="textbox">
+              <p>Transactions</p>
+              <div className="span">
+                <AiOutlineRightCircle className="icon" /> <p>Learn More</p>
+              </div>
+            </div>
+          </ApiCard>
+        </div>
+      </ApiSection>
       <ThirdSection>
         <h1>How It Works</h1>
         <div className="flex-box">
@@ -218,6 +269,7 @@ function Home({ handleOpen }) {
         >
           Join us
         </Button>
+        <img className="logobg" src={logobg} alt="bg" />
       </LastSection>
       <Footer>
         <img src={Logo} alt="Logo" />

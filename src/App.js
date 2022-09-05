@@ -1,5 +1,5 @@
 import Home from "./components/home";
-import "./App.css";
+import "./App.scss";
 import SignUpModal from "./components/modal";
 import { Modal } from "@mui/material";
 import { useState } from "react";

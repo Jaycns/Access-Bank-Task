@@ -8,8 +8,42 @@ export const FirstSection = styled.section`
   padding: 1rem 2rem;
   z-index: 99;
   position: relative;
+  overflow: hidden;
   .second {
     background: url(./images/background.png);
+  }
+  .logobg {
+    position: absolute;
+    right: -10%;
+    bottom: -10%;
+    mix-blend-mode: lighten;
+    overflow: hidden;
+    opacity: 0.1;
+    width: 1000px;
+    @media (max-width: 768px) {
+      width: 500px;
+      opacity: 0.2;
+      top: 10%;
+      left: 10%;
+    }
+  }
+  .mbox {
+    position: fixed;
+    right: 10%;
+    bottom: 10%;
+    animation: jump 0.3s linear inifinite 2s;
+    &:hover {
+      color: #ff9629;
+    }
+    @keyframes jump {
+      from {
+      }
+      to {
+      }
+    }
+    @media (max-width: 768px) {
+      width: 60px;
+    }
   }
 `;
 export const Carousel = styled.div`
@@ -175,13 +209,14 @@ export const Main = styled.main`
   align-items: center;
   margin: auto;
   height: 100%;
-
+  transition: all 0.5s ease-in-out;
   h1 {
     font-size: 72px;
     font-weight: 400;
     letter-spacing: 2px;
     margin: 0;
     height: 80px;
+    transition: 0.3s ease-in-out;
 
     @keyframes slide {
       0 {
@@ -198,7 +233,6 @@ export const Main = styled.main`
 
     span {
       color: #f5821f;
-      transition: all 0.5 ease-in-out;
     }
   }
   .text {
@@ -246,23 +280,43 @@ export const Main = styled.main`
 `;
 export const SecondSection = styled.section`
   width: 100%;
-  min-height: 40vh;
-  background-color: #fff;
+  min-height: 80vh;
+  background-color: #f6f7ff;
   padding: 2rem;
+  text-align: center;
+  color: #10295f;
+  .header {
+    color: #f5821f;
+    margin: 4rem;
+    font-size: 36px;
+    font-weight: 500;
+    text-transform: uppercase;
+    ${"" /* text-shadow: 0px 20px 10px rgba(245, 130, 31, 0.5); */}
+  }
   .flex-box {
-    display: flex;
-    gap: 1.2rem;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 2rem;
+    justify-content: center;
   }
   @media (max-width: 1300px) {
     .flex-box {
       display: grid;
       grid-template-columns: auto auto;
     }
+    .header {
+      font-size: 28px;
+      margin: 3rem;
+    }
   }
   @media (max-width: 768px) {
     .flex-box {
       display: flex;
       flex-direction: column;
+    }
+    .header {
+      font-size: 24px;
+      margin: 2rem;
     }
   }
 `;
@@ -273,12 +327,12 @@ export const Card = styled.div`
   align-items: center;
   text-align: center;
   gap: 0.8rem;
-  border: 1px solid rgba(245, 130, 31, 0.3);
+  box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(245, 130, 31, 0);
   border-radius: 10px;
-  padding: 0.8rem 1rem 6rem;
+  padding: 2rem 2rem 6rem;
   transition: 0.3s ease-in-out;
   &:hover {
-    box-shadow: 0px 0px 4px 3px rgba(245, 130, 31, 0.1);
     border: 1px solid rgba(245, 130, 31, 0);
     transform: scale(1.05);
   }
@@ -286,12 +340,14 @@ export const Card = styled.div`
   h1 {
     font-weight: 400;
     font-size: 32px;
-    opacity: 0.7;
+    color: #10295f;
+    opacity: 0.9;
   }
   p {
-    font-weight: 300;
-    font-size: 16px;
-    opacity: 0.7;
+    font-weight: 200;
+    font-size: 18px;
+    opacity: 1;
+    margin-top: 0;
   }
   @media (max-width: 1300px) {
     h1 {
@@ -315,6 +371,7 @@ export const Card = styled.div`
     }
   }
 `;
+
 export const ThirdSection = styled.section`
   width: 100%;
   min-height: 40vh;
@@ -323,12 +380,12 @@ export const ThirdSection = styled.section`
   background-color: rgb(255, 255, 255);
 
   h1 {
-    font-size: 32px;
+    font-size: 36px;
     font-weight: 500;
     letter-spacing: 4px;
     color: #f5821f;
     text-transform: uppercase;
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
   }
   .flex-box {
     display: flex;
@@ -402,6 +459,7 @@ export const ThirdSection = styled.section`
   }
 `;
 export const LastSection = styled.section`
+  position: relative;
   background-color: #f5821f;
   display: flex;
   justify-content: center;
@@ -412,6 +470,16 @@ export const LastSection = styled.section`
   font-size: 32px;
   font-weight: 500;
   padding: 8rem;
+  overflow: hidden;
+  .logobg {
+    left: 2%;
+    opacity: 0.8;
+    position: absolute;
+    width: 400px;
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
   button {
     :hover {
       border: 1px solid #10295f;
@@ -429,7 +497,7 @@ export const LastSection = styled.section`
   }
 `;
 export const Footer = styled.footer`
-  background-color: #10295f;
+  background: linear-gradient(to right, #10295f, #040b1b);
   padding: 2rem;
   display: flex;
   justify-content: flex-end;
