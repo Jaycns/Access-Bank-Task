@@ -15,11 +15,16 @@ export const FirstSection = styled.section`
   .logobg {
     position: absolute;
     right: -10%;
-    bottom: -10%;
+    bottom: -13%;
     mix-blend-mode: lighten;
     overflow: hidden;
     opacity: 0.1;
-    width: 1000px;
+    width: 900px;
+    @media (max-width: 1300px) {
+      width: 750px;
+      right: -15%;
+      bottom: -15%;
+    }
     @media (max-width: 768px) {
       width: 500px;
       opacity: 0.2;
@@ -31,18 +36,31 @@ export const FirstSection = styled.section`
     position: fixed;
     right: 10%;
     bottom: 10%;
-    animation: jump 0.3s linear inifinite 2s;
+    height: 5rem;
+
     &:hover {
       color: #ff9629;
     }
-    @keyframes jump {
-      from {
-      }
-      to {
-      }
-    }
+
     @media (max-width: 768px) {
       width: 60px;
+    }
+  }
+  .chatbox {
+    animation: jump 2s ease-in-out infinite alternate 5s;
+    @keyframes jump {
+      0% {
+        transform: translateY(-0%);
+      }
+      50% {
+        transform: translateY(10%);
+      }
+      100% {
+        transform: translateY(-20%);
+      }
+    }
+    &:hover {
+      animation-play-state: paused;
     }
   }
 `;
@@ -115,7 +133,7 @@ export const Nav = styled.div`
     text-transform: uppercase;
     letter-spacing: 4px;
     font-size: 16px;
-    font-weight: 300px;
+    font-weight: 300;
     transition: 0.3s ease-in-out;
     &:first-child {
       border-bottom: 2px solid #f5821f;
@@ -173,9 +191,9 @@ export const ButtonGroup = styled.div`
 
 export const Button = styled.button`
   outline: none;
-  background: ${({ bg }) => bg || "#f5821f"};
+  background: transparent;
   border-radius: ${({ bd }) => bd || "5px"};
-  color: white;
+  color: ${({ bg }) => bg || "#f5821f"};
   letter-spacing: 4px;
   text-transform: uppercase;
   padding: 0.8rem 1.2rem;
@@ -183,8 +201,8 @@ export const Button = styled.button`
   border: 1px solid #f5821f;
   transition: 0.3s ease-in-out;
   &:hover {
-    background: transparent;
-    color: #f5821f;
+    background: ${({ bg }) => bg || "#f5821f"};
+    color: white;
   }
   @media (max-width: 1300px) {
     font-size: 11px;
@@ -212,7 +230,7 @@ export const Main = styled.main`
   transition: all 0.5s ease-in-out;
   h1 {
     font-size: 72px;
-    font-weight: 400;
+    font-weight: 600;
     letter-spacing: 2px;
     margin: 0;
     height: 80px;
@@ -282,21 +300,21 @@ export const SecondSection = styled.section`
   width: 100%;
   min-height: 80vh;
   background-color: #f6f7ff;
-  padding: 2rem;
+  padding: 2rem 4rem;
   text-align: center;
   color: #10295f;
   .header {
     color: #f5821f;
     margin: 4rem;
     font-size: 36px;
-    font-weight: 500;
+    font-weight: 600;
     text-transform: uppercase;
     ${"" /* text-shadow: 0px 20px 10px rgba(245, 130, 31, 0.5); */}
   }
   .flex-box {
     display: grid;
     grid-template-columns: auto auto;
-    gap: 2rem;
+    gap: 4rem;
     justify-content: center;
   }
   @media (max-width: 1300px) {
@@ -332,9 +350,11 @@ export const Card = styled.div`
   border-radius: 10px;
   padding: 2rem 2rem 6rem;
   transition: 0.3s ease-in-out;
-  &:hover {
+  ${
+    "" /* &:hover {
     border: 1px solid rgba(245, 130, 31, 0);
     transform: scale(1.05);
+  } */
   }
 
   h1 {
@@ -381,7 +401,7 @@ export const ThirdSection = styled.section`
 
   h1 {
     font-size: 36px;
-    font-weight: 500;
+    font-weight: 600;
     letter-spacing: 4px;
     color: #f5821f;
     text-transform: uppercase;
@@ -402,7 +422,7 @@ export const ThirdSection = styled.section`
     flex-direction: column;
     h2 {
       font-size: 32px;
-      font-weight: 500;
+      font-weight: 600;
       opacity: 0.7;
       letter-spacing: 1.6px;
     }
@@ -473,7 +493,7 @@ export const LastSection = styled.section`
   overflow: hidden;
   .logobg {
     left: 2%;
-    opacity: 0.8;
+    opacity: 0.2;
     position: absolute;
     width: 400px;
     @media (max-width: 768px) {

@@ -14,6 +14,7 @@ import {
   Card,
   Footer,
 } from "../homeStyle.js";
+
 import { ApiSection, ApiCard } from "../homeStyle2";
 import Logo from "../images/logo.png";
 import Background from "../images/background.png";
@@ -30,11 +31,11 @@ import Inq from "../images/Inq.png";
 import Auth from "../images/authenticate.png";
 import Tranx from "../images/tranx.png";
 import Partners from "../images/partners.png";
-import { AiOutlineRightCircle } from "react-icons/ai";
+import { AiOutlineRightCircle, AiFillRightCircle } from "react-icons/ai";
 
 const initialSideBarShow = window.matchMedia("(max-width: 780px)").matches;
 const Show = window.matchMedia("(max-width: 1300px)").matches;
-function Home({ handleOpen }) {
+function Home({ handleOpen, handleChatbox }) {
   const [topNav, setTopNav] = useState(false);
   const [carousel, setCarousel] = useState(0);
   const nextSlide = () => {
@@ -88,7 +89,9 @@ function Home({ handleOpen }) {
           </TopNav>
 
           <img className="logobg" src={logobg} alt="bg" />
-          <img className="mbox" src={mbox} alt="mbox" />
+          <div className="mbox" onClick={handleChatbox}>
+            <img src={mbox} alt="mbox" className="chatbox" />
+          </div>
           <Main>
             <h1>
               Developer API <span>Portal</span>
@@ -132,7 +135,9 @@ function Home({ handleOpen }) {
           </TopNav>
 
           <img className="logobg" src={logobg} alt="bg" />
-          <img className="mbox" src={mbox} alt="mbox" />
+          <div className="mbox" onClick={handleChatbox}>
+            <img src={mbox} alt="mbox" className="chatbox" />
+          </div>
 
           <Main>
             <h1 className="text">
@@ -204,6 +209,7 @@ function Home({ handleOpen }) {
             <div className="textbox">
               <p>Inquiries</p>
               <div className="span">
+                <AiFillRightCircle className="hover" />
                 <AiOutlineRightCircle className="icon" /> <p>Learn More</p>
               </div>
             </div>
@@ -213,6 +219,7 @@ function Home({ handleOpen }) {
             <div className="textbox">
               <p>Authentication</p>
               <div className="span">
+                <AiFillRightCircle className="hover" />
                 <AiOutlineRightCircle className="icon" /> <p>Learn More</p>
               </div>
             </div>
@@ -222,6 +229,7 @@ function Home({ handleOpen }) {
             <div className="textbox">
               <p>Partners</p>
               <div className="span">
+                <AiFillRightCircle className="hover" />
                 <AiOutlineRightCircle className="icon" /> <p>Learn More</p>
               </div>
             </div>
@@ -231,6 +239,7 @@ function Home({ handleOpen }) {
             <div className="textbox">
               <p>Transactions</p>
               <div className="span">
+                <AiFillRightCircle className="hover" />
                 <AiOutlineRightCircle className="icon" /> <p>Learn More</p>
               </div>
             </div>

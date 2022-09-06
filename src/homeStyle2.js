@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const ApiSection = styled.section`
   min-height: 60vh;
   width: 100%;
-  padding: 2rem;
+  padding: 2rem 4rem;
   .header {
     color: #a4c519;
     font-size: 36px;
@@ -79,17 +79,32 @@ export const ApiCard = styled.div`
     display: none;
     align-items: center;
     gap: 0.5rem;
-    transition: display 2s ease;
-    -webkit-transition: display 2s ease-out;
-    -moz-transition: display 2s ease-out;
-    -o-transition: display 2s ease;
+    transition: all 2s ease;
+    -webkit-transition: all 2s ease;
+    -moz-transition: all 2s ease;
+    -o-transition: all 2s ease;
     .icon {
       font-size: 24px;
       color: #a4c519;
+      transition: all 0.5s ease;
+    }
+    .hover {
+      font-size: 24px;
+      color: #a4c519;
+      transition: all 0.5s ease;
+      display: none;
     }
     p {
       font-weight: 300;
       font-size: 18px;
+    }
+    :hover {
+      .hover {
+        display: block;
+      }
+      .icon {
+        display: none;
+      }
     }
   }
   &:hover {
@@ -101,7 +116,7 @@ export const ApiCard = styled.div`
       transform: scale(1.01);
     }
     .textbox {
-      background-color: rgba(255, 255, 255, 0.4);
+      background-color: rgba(255, 255, 255, 0.8);
     }
   }
 `;
