@@ -24,7 +24,18 @@ function Popup({ handleChatboxClose }) {
           <MdOutlineEmojiEmotions className="icon" />
         </div>
       </div>
-      <div className="chat"></div>
+      <div className="chat">
+        <div className="chat-container">
+          <div className="circle"></div>
+          <div className="msbox">
+            <h2>Freshchat</h2>
+            <p>
+              Hello there!... Need help? Reach out to us right here, and we'll
+              get back to you as soon as we can!
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

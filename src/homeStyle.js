@@ -41,10 +41,6 @@ export const FirstSection = styled.section`
     &:hover {
       color: #ff9629;
     }
-
-    @media (max-width: 768px) {
-      width: 60px;
-    }
   }
   .chatbox {
     animation: jump 2s ease-in-out infinite alternate 5s;
@@ -61,6 +57,10 @@ export const FirstSection = styled.section`
     }
     &:hover {
       animation-play-state: paused;
+    }
+
+    @media (max-width: 768px) {
+      width: 60px;
     }
   }
 `;
