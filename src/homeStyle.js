@@ -94,6 +94,7 @@ export const TopNav = styled.div`
   align-items: center;
   padding: 1rem 2rem;
   position: fixed;
+  z-index: 999;
   left: 0;
   top: 0;
   transition: all 0.3 ease-in-out;
@@ -126,7 +127,10 @@ export const Nav = styled.div`
   gap: 2rem;
 
   a {
-    text-decoration: none;
+    text-decoration: none !important;
+    list-style-type: none !important;
+    -webkit-text-decoration: none !important;
+    outline: none !important;
     height: 40px;
     color: white;
     padding: 0;
@@ -135,13 +139,13 @@ export const Nav = styled.div`
     font-size: 16px;
     font-weight: 300;
     transition: 0.3s ease-in-out;
-    &:first-child {
-      border-bottom: 2px solid #f5821f;
-      color: #f5821f;
-    }
     &:hover {
       color: #f5821f;
     }
+  }
+  a.active {
+    border-bottom: 2px solid #f5821f;
+    color: #f5821f;
   }
   @media (max-width: 1300px) {
     gap: 1.2rem;

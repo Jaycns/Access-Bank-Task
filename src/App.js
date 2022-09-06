@@ -1,20 +1,17 @@
-import Home from "./components/home";
+import Home from "./pages/home";
 import "./App.scss";
 import SignUpModal from "./components/modal";
 import Popup from "./components/popup";
 import { Modal } from "@mui/material";
-import { useState } from "react";
+import React, { useContext } from "react";
+import AppContext from "./context/context";
 
 function App() {
-  const [modal, setModal] = useState(false);
-  const [chatBox, setChatBox] = useState(false);
-  const handleChatbox = () => setChatBox(true);
-  const handleChatboxClose = () => setChatBox(false);
-  const handleOpen = () => setModal(true);
-  const handleClose = () => setModal(false);
+  const { handleChatbox, chatBox, handleChatboxClose, modal, handleClose } =
+    useContext(AppContext);
   return (
-    <div className="App">
-      <Home handleOpen={handleOpen} handleChatbox={handleChatbox} />
+    <>
+      <Home handleChatbox={handleChatbox} />
       {chatBox && <Popup handleChatboxClose={handleChatboxClose} />}
       <Modal
         open={modal}
@@ -26,7 +23,7 @@ function App() {
           <SignUpModal onClose={handleClose} />
         </div>
       </Modal>
-    </div>
+    </>
   );
 }
 

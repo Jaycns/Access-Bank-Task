@@ -1,10 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useContext } from "react";
+import AppContext from "../context/context";
 import "../App.scss";
 import {
   FirstSection,
-  TopNav,
-  Nav,
-  ButtonGroup,
   Button,
   Main,
   Carousel,
@@ -35,59 +33,13 @@ import { AiOutlineRightCircle, AiFillRightCircle } from "react-icons/ai";
 
 const initialSideBarShow = window.matchMedia("(max-width: 780px)").matches;
 const Show = window.matchMedia("(max-width: 1300px)").matches;
-function Home({ handleOpen, handleChatbox }) {
-  const [topNav, setTopNav] = useState(false);
-  const [carousel, setCarousel] = useState(0);
-  const nextSlide = () => {
-    if (carousel === 0) setCarousel(1);
-  };
-  const prevSlide = () => {
-    if (carousel === 1) setCarousel(0);
-  };
-  const navBg = () => {
-    if (window.scrollY >= 40) {
-      setTopNav(true);
-    } else {
-      setTopNav(false);
-    }
-  };
-  window.addEventListener("scroll", navBg);
-  useEffect(() => {
-    setInterval(() => {
-      if (carousel === 0) {
-        setCarousel(1);
-      }
-    }, 40000);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-  useEffect(() => {
-    setInterval(() => {
-      if (carousel === 1) {
-        setCarousel(0);
-      }
-    }, 40000);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+function Home() {
+  const { nextSlide, prevSlide, carousel, handleOpen, handleChatbox } =
+    useContext(AppContext);
   return (
     <div className="home">
       {carousel === 0 ? (
         <FirstSection>
-          <TopNav className={`header ${topNav ? "active" : ""}`}>
-            <img src={Logo} alt="Logo" />
-            <Nav>
-              <a href="/">Home</a>
-
-              <a href="/">Apis</a>
-              <a href="/">Products</a>
-              <a href="/">Applications</a>
-              <a href="/">Forum</a>
-            </Nav>
-            <ButtonGroup>
-              <a href="/">Sign in</a>
-              <Button onClick={handleOpen}>Get Access</Button>
-            </ButtonGroup>
-          </TopNav>
-
           <img className="logobg" src={logobg} alt="bg" />
           <div className="mbox" onClick={handleChatbox}>
             <img src={mbox} alt="mbox" className="chatbox" />
@@ -116,24 +68,6 @@ function Home({ handleOpen, handleChatbox }) {
         </FirstSection>
       ) : (
         <FirstSection style={{ backgroundImage: `url(${Background})` }}>
-          <TopNav className={`header ${topNav ? "active" : ""}`}>
-            <img src={Logo} alt="Logo" />
-            <Nav>
-              <a href="/">Home</a>
-
-              <a href="/">Apis</a>
-              <a href="/">Products</a>
-              <a href="/">Applications</a>
-              <a href="/">Forum</a>
-            </Nav>
-            <ButtonGroup>
-              <a href="/">Sign in</a>
-              <Button bd={Show ? "5px" : ""} onClick={handleOpen}>
-                Get Access
-              </Button>
-            </ButtonGroup>
-          </TopNav>
-
           <img className="logobg" src={logobg} alt="bg" />
           <div className="mbox" onClick={handleChatbox}>
             <img src={mbox} alt="mbox" className="chatbox" />
