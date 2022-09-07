@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const FirstSection = styled.section`
   background: linear-gradient(to right, #10295f, #040b1b);
-  height: ${({ h }) => h || "100"}vh;
+  height: ${({ h }) => h || "100vh"};
   width: 100%;
   color: white;
   padding: 1rem 2rem;
@@ -524,10 +524,12 @@ export const LastSection = styled.section`
 export const Footer = styled.footer`
   background: linear-gradient(to right, #10295f, #040b1b);
   padding: 2rem;
+  padding-right: 4rem;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   height: 20vh;
+
   img {
     width: 160px;
   }

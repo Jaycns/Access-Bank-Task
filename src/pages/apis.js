@@ -1,11 +1,14 @@
 import React from "react";
 import "../App.scss";
+import Logo from "../images/logo.png";
 // import AppContext from "../context/context";
-import { FirstSection } from "../styles/homeStyle";
+import { FirstSection, Footer } from "../styles/homeStyle";
 import logobg from "../images/Union.svg";
 import Background from "../images/blurred-bg.png";
-import { BsChevronDown } from "react-icons/bs";
+import { BsChevronDown, BsQuestionSquare, BsKey } from "react-icons/bs";
 import { FiSearch } from "react-icons/fi";
+import { FaPeopleCarry } from "react-icons/fa";
+import { MdOutlineEventNote } from "react-icons/md";
 import { Header, Mainer, Before } from "../styles/apiStyles";
 import accbase from "../images/apis_img/Accountbased.png";
 import calc from "../images/apis_img/calculator.png";
@@ -17,7 +20,7 @@ import fx from "../images/apis_img/fx.png";
 function Apis() {
   return (
     <div>
-      <FirstSection h="150">
+      <FirstSection h="auto">
         <Before />
         <img className="logobg" src={logobg} alt="bg" />
         <Header className="">
@@ -33,23 +36,23 @@ function Apis() {
             <h1>All APIs</h1>
             <div className="api-container">
               <div className="drop-down">
-                <span>r</span>
+                <BsQuestionSquare className="icon-down" />
                 <p>Inquiries</p>
                 <BsChevronDown className="icon-down" />
               </div>
               <div className="drop-down">
-                <span>r</span>
+                <BsKey className="icon-down" />
                 <p>Authentication</p>
                 <BsChevronDown className="icon-down" />
               </div>
               <div className="drop-down">
-                <span>r</span>
+                <FaPeopleCarry className="icon-down" />
                 <p>Partners</p>
                 <BsChevronDown className="icon-down" />
               </div>
               <div className="drop-down">
                 {" "}
-                <span>r</span>
+                <MdOutlineEventNote className="icon-down" />
                 <p>Transactions</p>
                 <BsChevronDown className="icon-down" />
               </div>
@@ -99,6 +102,9 @@ function Apis() {
             </div>
           </div>
         </Mainer>
+        <Footer>
+          <img src={Logo} alt="Logo" />
+        </Footer>
       </FirstSection>
     </div>
   );

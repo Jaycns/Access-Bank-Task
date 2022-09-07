@@ -17,7 +17,7 @@ export const Header = styled.div`
     position: absolute;
   }
   .text-box {
-    margin: 2rem 10rem;
+    margin: 2rem 12rem;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -47,7 +47,7 @@ export const Mainer = styled.div`
   gap: 1rem;
   min-height: 80vh;
   justify-content: space-between;
-  margin-bottom: 20rem;
+  margin-bottom: 6rem;
 @media (max-width: 1300px) {
    padding: 1rem 5rem; 
 }
@@ -82,13 +82,13 @@ export const Mainer = styled.div`
     justify-content: space-between;
     gap: 1rem;
     padding: 1.4rem 1.2rem;
-    background-image: linear-gradient(to bottom, rgba(217, 217, 217, .3) 0%, rgba(217, 217, 217, .15) 50%,rgba(217, 217, 217, 0) 100%);
+    background: linear-gradient(to bottom, rgba(217, 217, 217, .3) 0%, rgba(217, 217, 217, .15) 50%,rgba(217, 217, 217, 0) 100%);
     backdrop-filter: blur(15px);
     border-radius: 10px;
-    transition: all 0.4s ease-in-out;
+    transition: background 1s ease;
     cursor: pointer;
     :hover {
-      background-image: linear-gradient(to bottom, rgba(217, 217, 217, .4) 0%, rgba(217, 217, 217, .3) 50%,rgba(217, 217, 217, 0) 100%);  
+      background: linear-gradient(to bottom, rgba(217, 217, 217, .6) 0%, rgba(217, 217, 217, .4) 50%,rgba(217, 217, 217, 0) 100%);  
     }
     p{
         font-size: 18px;
@@ -156,6 +156,7 @@ opacity: 0.9;
         background-color: #fff;
         border-radius: 10px;
         display: flex;
+        cursor: pointer;
         :hover {
             .dark-blur{
                 transform: translateY(0%);
