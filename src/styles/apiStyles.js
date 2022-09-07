@@ -157,6 +157,11 @@ opacity: 0.9;
         border-radius: 10px;
         display: flex;
         cursor: pointer;
+        ::nth-child(5){
+          img{
+            transform: translateX(20%);
+          }
+        }
         :hover {
             .dark-blur{
                 transform: translateY(0%);
@@ -172,6 +177,7 @@ opacity: 0.9;
         img{
             position: absolute;
             bottom: 0;
+            transform: translateX(-10%);
         }
     .dark-blur{
         background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0)); 

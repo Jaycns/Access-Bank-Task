@@ -38,13 +38,11 @@ export const FirstSection = styled.section`
     right: 10%;
     bottom: 10%;
     height: 5rem;
-
-    &:hover {
-      color: #ff9629;
-    }
   }
   .chatbox {
     animation: jump 2s ease-in-out infinite alternate 5s;
+    position: relative;
+
     @keyframes jump {
       0% {
         transform: translateY(-0%);
@@ -56,6 +54,7 @@ export const FirstSection = styled.section`
         transform: translateY(-20%);
       }
     }
+
     &:hover {
       animation-play-state: paused;
     }
@@ -166,14 +165,14 @@ export const ButtonGroup = styled.div`
   align-items: center;
   gap: 2rem;
   height: 40px;
-  a {
-    text-decoration: none;
+  p {
     color: white;
     text-transform: uppercase;
     letter-spacing: 4px;
     font-size: 16px;
     font-weight: 300px;
     transition: 0.3s ease-in-out;
+    cursor: pointer;
     &:hover {
       color: #f5821f;
     }
@@ -238,7 +237,36 @@ export const Button = styled.button`
     font-size: 8px;
   }
 `;
-
+export const ButtonFill = styled.button`
+  outline: none;
+  background: ${({ bg }) => bg || " #f5821f "};
+  border-radius: ${({ bd }) => bd || "5px"};
+  color: #fff;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  padding: 0.8rem 1.2rem;
+  width: ${({ width }) => width || ""};
+  border: 1px solid #f5821f;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    left: 0px;
+    top: 0;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+  }
+  :hover {
+    ::before {
+      transform: translateX(0%);
+    }
+  }
+`;
 export const Main = styled.main`
   text-align: center;
   display: flex;
@@ -248,29 +276,7 @@ export const Main = styled.main`
   margin: auto;
   height: 100%;
   transition: all 0.5s ease-in-out;
-  button {
-    background-color: #f5821f;
-    color: white;
-    position: relative;
-    overflow: hidden;
-    transition: all 0.5s ease;
 
-    .blur {
-      position: absolute;
-      width: 100%;
-      height: 40px;
-      background-color: rgba(255, 255, 255, 0.1);
-      left: 0px;
-      top: 0;
-      transform: translateX(100%);
-      transition: transform 0.3s ease;
-    }
-    :hover {
-      .blur {
-        transform: translateX(0%);
-      }
-    }
-  }
   h1 {
     font-size: 72px;
     font-weight: 600;
@@ -534,29 +540,6 @@ export const LastSection = styled.section`
   font-weight: 500;
   padding: 8rem;
   overflow: hidden;
-  button {
-    background-color: #10295f;
-    color: white;
-    position: relative;
-    overflow: hidden;
-    transition: all 0.5s ease;
-
-    .blur {
-      position: absolute;
-      width: 100%;
-      height: 40px;
-      background-color: rgba(255, 255, 255, 0.1);
-      left: 0px;
-      top: 0;
-      transform: translateX(100%);
-      transition: transform 0.3s ease;
-    }
-    :hover {
-      .blur {
-        transform: translateX(0%);
-      }
-    }
-  }
   .logobg {
     left: 2%;
     opacity: 0.2;
@@ -611,12 +594,20 @@ export const Footer = styled.footer`
 export const ModalBox = styled.div`
   padding: 2rem;
   width: 40rem;
-  min-height: 80vh;
+  min-height: ${({ h }) => h || "60"}vh;
   border: 2px solid rgba(0, 0, 0, 0.3);
   position: absolute;
   z-index: 99;
   background: #f6f7f3;
   transform: translate(100%, 20%);
+  .icon {
+    position: absolute;
+    font-size: 24px;
+    right: 6%;
+    opacity: 0.6;
+    color: #767779;
+  }
+
   img {
     width: 160px;
   }
@@ -625,6 +616,16 @@ export const ModalBox = styled.div`
     font-size: 40px;
     opacity: 0.7;
     margin-top: 1rem;
+  }
+  p {
+    font-size: 16px;
+    margin: 0.8rem 0;
+    cursor: pointer;
+    span {
+      color: #f5821f;
+      :hover {
+      }
+    }
   }
   .checkbox {
     display: flex;
@@ -645,6 +646,10 @@ export const ModalBox = styled.div`
       font-weight: 300;
       opacity: 0.8;
     }
+    p {
+      font-size: 15px;
+      font-weight: 300;
+    }
   }
   @media (max-width: 768px) {
     width: 100%;
@@ -660,6 +665,9 @@ export const ModalBox = styled.div`
       font-weight: 300;
       opacity: 0.8;
     }
+    p {
+      font-size: 14px;
+    }
   }
 `;
 export const InputBox = styled.div`
@@ -667,7 +675,10 @@ export const InputBox = styled.div`
   gap: 1rem;
   flex-direction: column;
   margin-top: 1rem;
+  overflow: scroll;
+  height: ${({ h }) => h || "30"}vh;
   width: 100%;
+  position: relative;
   & div {
     display: flex;
     justify-content: space-between;

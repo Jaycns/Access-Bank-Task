@@ -1,12 +1,19 @@
-import React from "react";
+import React, { useContext } from "react";
+import AppContext from "../context/context";
 import Logo from "../images/logo_2.png";
-import { ModalBox, InputBox, CheckBox, Button } from "../styles/homeStyle";
+import { BsXLg } from "react-icons/bs";
+import { ModalBox, InputBox, CheckBox, ButtonFill } from "../styles/homeStyle";
 
-function SignupModal({ onClose }) {
+function SignupModal() {
+  const { handleLoginOpen, handleClose } = useContext(AppContext);
   return (
     <ModalBox>
+      <BsXLg className="icon" onClick={handleClose} />
       <img src={Logo} alt="Logo" />
       <h1>Create an account</h1>
+      <p>
+        Already have one? <span onClick={handleLoginOpen}>Sign in now</span>
+      </p>
       <form method="post" action="">
         <InputBox>
           <div className="">
@@ -53,9 +60,9 @@ function SignupModal({ onClose }) {
               I agree to the <span>Terms</span> and <span>Conditions</span>
             </p>
           </CheckBox>
-          <Button className="btn" width="150px" bd="20px" onClick={onClose}>
+          <ButtonFill width="150px" onClick={handleClose} disabled>
             Submit
-          </Button>
+          </ButtonFill>
         </div>
       </form>
     </ModalBox>

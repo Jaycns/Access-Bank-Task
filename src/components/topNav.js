@@ -4,7 +4,7 @@ import Logo from "../images/logo.png";
 import { Link } from "react-router-dom";
 import { TopNav, Nav, ButtonGroup, Button } from "../styles/homeStyle.js";
 function Top() {
-  const { topNav, handleOpen } = useContext(AppContext);
+  const { topNav, handleOpen, handleLoginOpen } = useContext(AppContext);
   const [activeNav, setActiveNav] = useState("/");
   const handleNav = (e) => {
     setActiveNav(e.target.getAttribute("id"));
@@ -57,7 +57,7 @@ function Top() {
           </Link>
         </Nav>
         <ButtonGroup>
-          <a href="/">Sign in</a>
+          <p  onClick={handleLoginOpen}>Sign in</p>
           <Button onClick={handleOpen}>Get Access</Button>
         </ButtonGroup>
       </TopNav>

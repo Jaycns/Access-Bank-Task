@@ -1,14 +1,22 @@
 import Home from "./pages/home";
 import "./App.scss";
-import SignUpModal from "./components/modal";
+import LoginModal from "./components/loginmodal";
+import SignUpModal from "./components/signupmodal";
 import Popup from "./components/popup";
 import { Modal } from "@mui/material";
 import React, { useContext } from "react";
 import AppContext from "./context/context";
 
 function App() {
-  const { handleChatbox, chatBox, handleChatboxClose, modal, handleClose } =
-    useContext(AppContext);
+  const {
+    handleChatbox,
+    chatBox,
+    handleChatboxClose,
+    modal,
+    handleClose,
+    handleLoginClose,
+    loginModal,
+  } = useContext(AppContext);
   return (
     <>
       <Home handleChatbox={handleChatbox} />
@@ -21,6 +29,16 @@ function App() {
       >
         <div>
           <SignUpModal onClose={handleClose} />
+        </div>
+      </Modal>
+      <Modal
+        open={loginModal}
+        onClose={handleLoginClose}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <div>
+          <LoginModal onClose={handleLoginClose} />
         </div>
       </Modal>
     </>

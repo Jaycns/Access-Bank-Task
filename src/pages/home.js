@@ -3,7 +3,6 @@ import AppContext from "../context/context";
 import "../App.scss";
 import {
   FirstSection,
-  Button,
   Main,
   Carousel,
   SecondSection,
@@ -11,6 +10,7 @@ import {
   LastSection,
   Card,
   Footer,
+  ButtonFill,
 } from "../styles/homeStyle.js";
 
 import { ApiSection, ApiCard } from "../styles/homeStyle2";
@@ -34,8 +34,13 @@ import { AiOutlineRightCircle, AiFillRightCircle } from "react-icons/ai";
 const initialSideBarShow = window.matchMedia("(max-width: 780px)").matches;
 const Show = window.matchMedia("(max-width: 1300px)").matches;
 function Home() {
-  const { nextSlide, prevSlide, carousel, handleOpen, handleChatbox } =
-    useContext(AppContext);
+  const {
+    nextSlide,
+    prevSlide,
+    carousel,
+    handleOpen,
+    handleChatbox,
+  } = useContext(AppContext);
   return (
     <div className="home">
       {carousel === 0 ? (
@@ -53,13 +58,12 @@ function Home() {
               <br />
               fintechs and software developers in Africa and beyond.
             </p>
-            <Button
+            <ButtonFill
               width={initialSideBarShow ? "8rem" : Show ? "9rem" : "12rem"}
               onClick={handleOpen}
             >
-              <div className="blur"></div>
               Get Access
-            </Button>
+            </ButtonFill>
           </Main>
           <Carousel>
             <div className="line"></div>
@@ -84,13 +88,12 @@ function Home() {
               <br />
               complement your imagination.
             </p>
-            <Button
+            <ButtonFill
               width={initialSideBarShow ? "8rem" : Show ? "9rem" : "12rem"}
               onClick={handleOpen}
             >
               Join us
-              <div className="blur"></div>
-            </Button>
+            </ButtonFill>
           </Main>
           <Carousel>
             <div className="line inactive" onClick={prevSlide}></div>
@@ -204,14 +207,13 @@ function Home() {
       </ThirdSection>
       <LastSection>
         Start integrating with our APIs now and grow your business
-        <Button
+        <ButtonFill
           bg="#10295F"
           width={initialSideBarShow ? "7rem" : Show ? "8rem" : "12rem"}
           onClick={handleOpen}
         >
-          <div className="blur"></div>
           Join us
-        </Button>
+        </ButtonFill>
         <img className="logobg" src={logobg} alt="bg" />
       </LastSection>
       <Footer>
