@@ -204,10 +204,25 @@ export const Button = styled.button`
   padding: 0.8rem 1.2rem;
   width: ${({ width }) => width || ""};
   border: 1px solid #f5821f;
-  transition: 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease;
+  .blur {
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    left: 0px;
+    top: 0;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+  }
   &:hover {
     background: ${({ bg }) => bg || "#f5821f"};
     color: white;
+    .blur {
+      transform: translateX(0%);
+    }
   }
   @media (max-width: 1300px) {
     font-size: 11px;
@@ -233,6 +248,29 @@ export const Main = styled.main`
   margin: auto;
   height: 100%;
   transition: all 0.5s ease-in-out;
+  button {
+    background-color: #f5821f;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease;
+
+    .blur {
+      position: absolute;
+      width: 100%;
+      height: 40px;
+      background-color: rgba(255, 255, 255, 0.1);
+      left: 0px;
+      top: 0;
+      transform: translateX(100%);
+      transition: transform 0.3s ease;
+    }
+    :hover {
+      .blur {
+        transform: translateX(0%);
+      }
+    }
+  }
   h1 {
     font-size: 72px;
     font-weight: 600;
@@ -496,6 +534,29 @@ export const LastSection = styled.section`
   font-weight: 500;
   padding: 8rem;
   overflow: hidden;
+  button {
+    background-color: #10295f;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease;
+
+    .blur {
+      position: absolute;
+      width: 100%;
+      height: 40px;
+      background-color: rgba(255, 255, 255, 0.1);
+      left: 0px;
+      top: 0;
+      transform: translateX(100%);
+      transition: transform 0.3s ease;
+    }
+    :hover {
+      .blur {
+        transform: translateX(0%);
+      }
+    }
+  }
   .logobg {
     left: 2%;
     opacity: 0.2;
@@ -505,12 +566,7 @@ export const LastSection = styled.section`
       display: none;
     }
   }
-  button {
-    :hover {
-      border: 1px solid #10295f;
-      color: #10295f;
-    }
-  }
+
   @media (max-width: 1300px) {
     text-align: center;
     font-size: 24px;

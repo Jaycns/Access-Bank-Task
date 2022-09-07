@@ -54,10 +54,10 @@ function Home() {
               fintechs and software developers in Africa and beyond.
             </p>
             <Button
-              bd="40px"
               width={initialSideBarShow ? "8rem" : Show ? "9rem" : "12rem"}
               onClick={handleOpen}
             >
+              <div className="blur"></div>
               Get Access
             </Button>
           </Main>
@@ -85,11 +85,11 @@ function Home() {
               complement your imagination.
             </p>
             <Button
-              bd="40px"
               width={initialSideBarShow ? "8rem" : Show ? "9rem" : "12rem"}
               onClick={handleOpen}
             >
               Join us
+              <div className="blur"></div>
             </Button>
           </Main>
           <Carousel>
@@ -206,10 +206,10 @@ function Home() {
         Start integrating with our APIs now and grow your business
         <Button
           bg="#10295F"
-          bd="40px"
           width={initialSideBarShow ? "7rem" : Show ? "8rem" : "12rem"}
           onClick={handleOpen}
         >
+          <div className="blur"></div>
           Join us
         </Button>
         <img className="logobg" src={logobg} alt="bg" />
