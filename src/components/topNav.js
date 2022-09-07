@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import AppContext from "../context/context";
 import Logo from "../images/logo.png";
 import { Link } from "react-router-dom";
-import { TopNav, Nav, ButtonGroup, Button } from "../homeStyle.js";
+import { TopNav, Nav, ButtonGroup, Button } from "../styles/homeStyle.js";
 function Top() {
   const { topNav, handleOpen } = useContext(AppContext);
   const [activeNav, setActiveNav] = useState("/");

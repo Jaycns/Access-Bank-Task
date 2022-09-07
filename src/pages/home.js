@@ -11,9 +11,9 @@ import {
   LastSection,
   Card,
   Footer,
-} from "../homeStyle.js";
+} from "../styles/homeStyle.js";
 
-import { ApiSection, ApiCard } from "../homeStyle2";
+import { ApiSection, ApiCard } from "../styles/homeStyle2";
 import Logo from "../images/logo.png";
 import Background from "../images/background.png";
 import One from "../images/one.svg";

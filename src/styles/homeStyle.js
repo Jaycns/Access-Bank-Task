@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const FirstSection = styled.section`
   background: linear-gradient(to right, #10295f, #040b1b);
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   color: white;
   padding: 1rem 2rem;

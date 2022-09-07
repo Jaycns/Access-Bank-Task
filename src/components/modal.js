@@ -1,6 +1,6 @@
 import React from "react";
 import Logo from "../images/logo_2.png";
-import { ModalBox, InputBox, CheckBox, Button } from "../homeStyle";
+import { ModalBox, InputBox, CheckBox, Button } from "../styles/homeStyle";
 
 function SignupModal({ onClose }) {
   return (
