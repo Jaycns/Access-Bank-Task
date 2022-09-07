@@ -40,7 +40,7 @@ export const Header = styled.div`
     }
   }
 `;
-export const Main = styled.div`
+export const Mainer = styled.div`
   padding: 1rem 10rem;
   width: 100%;
   display: flex;

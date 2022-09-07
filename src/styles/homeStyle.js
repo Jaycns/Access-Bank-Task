@@ -2,13 +2,14 @@ import styled from "styled-components";
 
 export const FirstSection = styled.section`
   background: linear-gradient(to right, #10295f, #040b1b);
-  min-height: 100vh;
+  height: ${({ h }) => h || "100"}vh;
   width: 100%;
   color: white;
   padding: 1rem 2rem;
   z-index: 99;
   position: relative;
   overflow: hidden;
+  min-height: 100vh;
   .second {
     background: url(./images/background.png);
   }
