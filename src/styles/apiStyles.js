@@ -85,6 +85,11 @@ export const Mainer = styled.div`
     background-image: linear-gradient(to bottom, rgba(217, 217, 217, .3) 0%, rgba(217, 217, 217, .15) 50%,rgba(217, 217, 217, 0) 100%);
     backdrop-filter: blur(15px);
     border-radius: 10px;
+    transition: all 0.4s ease-in-out;
+    cursor: pointer;
+    :hover {
+      background-image: linear-gradient(to bottom, rgba(217, 217, 217, .4) 0%, rgba(217, 217, 217, .3) 50%,rgba(217, 217, 217, 0) 100%);  
+    }
     p{
         font-size: 18px;
         font-weight: 300;
@@ -151,6 +156,11 @@ opacity: 0.9;
         background-color: #fff;
         border-radius: 10px;
         display: flex;
+        :hover {
+            .dark-blur{
+                transform: translateY(0%);
+            }
+        }
         p{
     z-index: 1000;
     margin: 1rem;
@@ -166,9 +176,10 @@ opacity: 0.9;
         background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0)); 
         position: absolute;
         bottom: 0;
-        height: 60px;
+        height: 300px;
         width: 100%;
-
+transform: translateY(50%);
+transition: transform .4s ease;
     }
         }
         @media (max-width: 1300px) {
