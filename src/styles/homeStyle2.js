@@ -4,6 +4,7 @@ export const ApiSection = styled.section`
   min-height: 60vh;
   width: 100%;
   padding: 2rem 4rem;
+  box-shadow: 0px 10px 15px 15px rgba(0, 0, 0, 0.1);
   .header {
     color: #a4c519;
     font-size: 36px;

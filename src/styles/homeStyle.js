@@ -447,8 +447,8 @@ export const ThirdSection = styled.section`
   min-height: 40vh;
   padding: 4rem;
   text-align: center;
-  background-color: rgb(255, 255, 255);
-
+  background-color: #f6f7ff;
+  box-shadow: 0px 10px 15px 15px rgba(0, 0, 0, 0.1);
   h1 {
     font-size: 36px;
     font-weight: 600;
@@ -470,6 +470,9 @@ export const ThirdSection = styled.section`
     align-items: center;
     text-align: center;
     flex-direction: column;
+    img {
+      width: 130px;
+    }
     h2 {
       font-size: 32px;
       font-weight: 600;
@@ -639,7 +642,7 @@ export const ModalBox = styled.div`
     padding: 1.4rem;
     transform: translate(0%, 10%);
     width: 100%;
-    .icon{
+    .icon {
       right: 3%;
     }
     img {
