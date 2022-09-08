@@ -2,20 +2,21 @@ import React, { useContext } from "react";
 import AppContext from "../context/context";
 import "../App.scss";
 import { MdAttachFile, MdOutlineEmojiEmotions } from "react-icons/md";
-import { AiOutlineLeft } from "react-icons/ai";
+// import { AiOutlineLeft } from "react-icons/ai";
+import { BsXLg } from "react-icons/bs";
 
 function Popup() {
   const { handleChatboxClose } = useContext(AppContext);
   return (
     <div className="popup-container">
       <div className="box">
-        <span>
-          <AiOutlineLeft className="icon" onClick={handleChatboxClose} />
-        </span>
         <div className="top-text">
           <h1>Help</h1>
           <p>Typically replies in under 5 mins</p>
         </div>
+        <span>
+          <BsXLg className="icon" onClick={handleChatboxClose} />
+        </span>
       </div>
       <div className="type">
         <div className="replybox">
@@ -32,8 +33,8 @@ function Popup() {
           <div className="msbox">
             <h2>Freshchat</h2>
             <p>
-              Hello there!... Need help? Reach out to us right here, and we'll
-              get back to you as soon as we can!
+              Hello there!👋Need help? Reach out to us right here, and we'll get
+              back to you as soon as we can!
             </p>
           </div>
         </div>

@@ -179,13 +179,13 @@ export const ButtonGroup = styled.div`
   }
   @media (max-width: 1300px) {
     gap: 1rem;
-    a {
+    p {
       font-size: 11px;
     }
   }
   @media (max-width: 768px) {
     gap: 0.8rem;
-    a {
+    p {
       display: none;
       font-size: 11px;
       letter-spacing: 2px;
@@ -206,22 +206,10 @@ export const Button = styled.button`
   position: relative;
   overflow: hidden;
   transition: all 0.5s ease;
-  .blur {
-    position: absolute;
-    width: 100%;
-    height: 40px;
-    background-color: rgba(255, 255, 255, 0.1);
-    left: 0px;
-    top: 0;
-    transform: translateX(100%);
-    transition: transform 0.3s ease;
-  }
+
   &:hover {
     background: ${({ bg }) => bg || "#f5821f"};
     color: white;
-    .blur {
-      transform: translateX(0%);
-    }
   }
   @media (max-width: 1300px) {
     font-size: 11px;
@@ -265,6 +253,19 @@ export const ButtonFill = styled.button`
     ::before {
       transform: translateX(0%);
     }
+  }
+  @media (max-width: 1300px) {
+    font-size: 11px;
+    letter-spacing: 2px;
+    padding: 0.6rem 1rem;
+  }
+  @media (max-width: 768px) {
+    padding: 0.6rem 0.8rem;
+    font-size: 11px;
+    letter-spacing: 2px;
+  }
+  @media (max-width: 328px) {
+    font-size: 8px;
   }
 `;
 export const Main = styled.main`
@@ -638,6 +639,9 @@ export const ModalBox = styled.div`
     padding: 1.4rem;
     transform: translate(0%, 10%);
     width: 100%;
+    .icon{
+      right: 3%;
+    }
     img {
       width: 100px;
     }
@@ -654,7 +658,7 @@ export const ModalBox = styled.div`
   @media (max-width: 768px) {
     width: 100%;
     padding: 1.4rem;
-    transform: translate(0%, 8%);
+    transform: translate(0%, 20%);
     min-height: 50vh;
     img {
       width: 80px;

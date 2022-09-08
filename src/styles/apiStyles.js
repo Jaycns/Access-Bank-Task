@@ -39,6 +39,11 @@ export const Header = styled.div`
       margin: 2rem 7rem;
     }
   }
+  @media (max-width: 1024px) {
+    .text-box {
+      margin: 2rem 3rem;
+    }
+  }
 `;
 export const Mainer = styled.div`
   padding: 1rem 10rem;
@@ -127,27 +132,33 @@ export const Mainer = styled.div`
         font-size: 24px;
         color: #fff;
        }
-       input{
-border: none; 
-outline: none;
-background: transparent;
-width: 100%;
-color: #fff;
-font-size: 18px;
-opacity: 0.9;
+              input{
+              border: none; 
+              outline: none;
+              background: transparent;
+              width: 100%;
+              color: #fff;
+              font-size: 18px;
+              opacity: 0.9;
+
 ::placeholder{
     opacity: .5;
     color: #fff;
 }
        }
+
      }
+     @media (max-width:1024px){
+        width: 80%;
+        .search-box{
+            width: 80%;
+        }
+    }
      .grid-box{
         display: grid;
         grid-template-columns: auto auto auto;
         width: 100%;
         row-gap: 3rem;
-
-
         .apibox{
         width: 280px;
         height: 30vh;
@@ -198,15 +209,10 @@ transition: transform .4s ease;
         }
         @media (max-width: 1030px) {
             grid-template-columns: auto auto;
-            gap: 1rem;
+            gap: 3rem;
         }
      }
-     @media (max-width:1024px){
-        width: 60%;
-        .search-box{
-            width: 80%;
-        }
-    }
+     
   }
 `;
 export const Before = styled.div`
