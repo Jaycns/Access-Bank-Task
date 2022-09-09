@@ -234,7 +234,7 @@ export const ButtonFill = styled.button`
   text-transform: uppercase;
   padding: 0.8rem 1.2rem;
   width: ${({ width }) => width || ""};
-  border: 1px solid #f5821f;
+  border: none;
   position: relative;
   overflow: hidden;
   transition: all 0.5s ease;
@@ -252,6 +252,12 @@ export const ButtonFill = styled.button`
   :hover {
     ::before {
       transform: translateX(0%);
+    }
+  }
+  :disabled {
+    ::before {
+      transform: translateX(0%);
+      background-color: rgba(255, 255, 255, 0.8);
     }
   }
   @media (max-width: 1300px) {

@@ -60,7 +60,7 @@ function SignupModal() {
               I agree to the <span>Terms</span> and <span>Conditions</span>
             </p>
           </CheckBox>
-          <ButtonFill width="150px" onClick={handleClose} disabled>
+          <ButtonFill width="150px" onClick={handleClose} disabled={true}>
             Submit
           </ButtonFill>
         </div>

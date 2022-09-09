@@ -31,7 +31,7 @@ function LoginModal({ onClose }) {
               <span>Forgot your password?</span>
             </p>
           </CheckBox>
-          <ButtonFill width="150px" onClick={onClose}>
+          <ButtonFill width="150px" onClick={onClose} disabled= {true}>
             Submit
           </ButtonFill>
         </div>
