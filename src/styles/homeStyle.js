@@ -354,14 +354,14 @@ export const Main = styled.main`
 `;
 export const SecondSection = styled.section`
   width: 100%;
-  min-height: 80vh;
+  min-height: 90vh;
   background-color: #f6f7ff;
-  padding: 2rem 4rem;
+  padding: 6rem 4rem;
   text-align: center;
   color: #10295f;
   .header {
     color: #f5821f;
-    margin: 4rem;
+    margin-bottom: 4rem;
     font-size: 36px;
     font-weight: 600;
     text-transform: uppercase;
@@ -450,11 +450,14 @@ export const Card = styled.div`
 
 export const ThirdSection = styled.section`
   width: 100%;
-  min-height: 40vh;
-  padding: 4rem;
+  height: 70vh;
+  padding: 6rem 4rem;
+  margin: 0 auto;
   text-align: center;
   background-color: #f6f7ff;
   box-shadow: 0px 10px 15px 15px rgba(0, 0, 0, 0.1);
+  border-bottom: 8px solid #10295f;
+  color: #1d2758;
   h1 {
     font-size: 36px;
     font-weight: 600;
@@ -477,7 +480,7 @@ export const ThirdSection = styled.section`
     text-align: center;
     flex-direction: column;
     img {
-      width: 130px;
+      width: 180px;
     }
     h2 {
       font-size: 32px;
@@ -486,9 +489,13 @@ export const ThirdSection = styled.section`
       letter-spacing: 1.6px;
     }
     p {
-      font-weight: 400;
-
+      font-weight: 200;
+      letter-spacing: 1%;
+      font-size: 20px;
       opacity: 0.8;
+      width: 50%;
+      text-align: center;
+      line-height: 2rem;
     }
   }
   @media (max-width: 1300px) {
@@ -513,6 +520,7 @@ export const ThirdSection = styled.section`
     }
   }
   @media (max-width: 768px) {
+    height: auto;
     h1 {
       font-size: 24px;
       letter-spacing: 2px;
@@ -541,10 +549,13 @@ export const LastSection = styled.section`
   position: relative;
   background-color: #f5821f;
   display: flex;
+  height: 60vh;
+  text-align: center;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 1.2rem;
+  gap: 2rem;
+  letter-spacing: 1%;
   color: white;
   font-size: 32px;
   font-weight: 500;
@@ -554,7 +565,7 @@ export const LastSection = styled.section`
     left: 2%;
     opacity: 0.2;
     position: absolute;
-    width: 400px;
+    width: 620px;
     @media (max-width: 768px) {
       display: none;
     }

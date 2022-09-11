@@ -1,10 +1,13 @@
 import styled from "styled-components";
 
 export const ApiSection = styled.section`
-  min-height: 60vh;
+  height: 80vh;
   width: 100%;
-  padding: 2rem 4rem;
+  padding: 6rem 4rem;
   box-shadow: 0px 10px 15px 15px rgba(0, 0, 0, 0.1);
+  @media (max-width: 768px) {
+    height: auto;
+  }
   .header {
     color: #a4c519;
     font-size: 36px;
@@ -19,6 +22,33 @@ export const ApiSection = styled.section`
     justify-content: center;
     gap: 3rem;
   }
+  .view-box {
+    color: #a4c519;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 6rem;
+    gap: 0.4rem;
+    cursor: pointer;
+    .hover {
+      display: none;
+      font-size: 24px;
+    }
+    .icon {
+      font-size: 24px;
+    }
+    p {
+      font-size: 20px;
+    }
+    :hover {
+      .hover {
+        display: block;
+      }
+      .icon {
+        display: none;
+      }
+    }
+  }
   @media (max-width: 1300px) {
     .header {
       font-size: 28px;
@@ -26,6 +56,11 @@ export const ApiSection = styled.section`
     }
   }
   @media (max-width: 768px) {
+    .view-box {
+      p {
+        font-size: 16px;
+      }
+    }
     .flex-box {
       flex-direction: column;
       align-items: center;

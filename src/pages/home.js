@@ -34,13 +34,8 @@ import { AiOutlineRightCircle, AiFillRightCircle } from "react-icons/ai";
 const initialSideBarShow = window.matchMedia("(max-width: 780px)").matches;
 const Show = window.matchMedia("(max-width: 1300px)").matches;
 function Home() {
-  const {
-    nextSlide,
-    prevSlide,
-    carousel,
-    handleOpen,
-    handleChatbox,
-  } = useContext(AppContext);
+  const { nextSlide, prevSlide, carousel, handleOpen, handleChatbox } =
+    useContext(AppContext);
   return (
     <div className="home">
       {carousel === 0 ? (
@@ -182,6 +177,10 @@ function Home() {
             </div>
           </ApiCard>
         </div>
+        <div className="view-box">
+          <AiFillRightCircle className="hover" />
+          <AiOutlineRightCircle className="icon" /> <p>View all</p>
+        </div>
       </ApiSection>
       <ThirdSection>
         <h1>How It Works</h1>
@@ -206,7 +205,8 @@ function Home() {
         </div>
       </ThirdSection>
       <LastSection>
-        Start integrating with our APIs now and grow your business
+        Start integrating with our APIs now and grow <br />
+        your business
         <ButtonFill
           bg="#10295F"
           width={initialSideBarShow ? "7rem" : Show ? "8rem" : "12rem"}
