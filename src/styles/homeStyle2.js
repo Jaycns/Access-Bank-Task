@@ -20,7 +20,7 @@ export const ApiSection = styled.section`
   .flex-box {
     display: flex;
     justify-content: center;
-    gap: 3rem;
+    gap: 6rem;
   }
   .view-box {
     color: #a4c519;

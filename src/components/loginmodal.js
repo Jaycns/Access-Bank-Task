@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import AppContext from "../context/context";
 import Logo from "../images/logo_2.png";
 import { BsXLg } from "react-icons/bs";
-import { ModalBox, InputBox, CheckBox, ButtonFill } from "../styles/homeStyle";
+import { ModalBox, InputBox, CheckBox, ButtonFill } from "../styles/layoutStyles";
 
 function LoginModal({ onClose }) {
   const { handleOpen, handleLoginClose } = useContext(AppContext);
@@ -18,11 +18,11 @@ function LoginModal({ onClose }) {
         <InputBox h="12">
           <div className="">
             <label>Email</label>
-            <input type="text" />
+            <input type="text" required='email*'/>
           </div>
           <div className="">
             <label>Password</label>
-            <input type="password" />
+            <input type="password" required='password*'/>
           </div>
         </InputBox>
         <div className="checkbox">

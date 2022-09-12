@@ -42,8 +42,9 @@ export const AppProvider = (props) => {
   }, []);
   const [topNav, setTopNav] = useState(false);
   const navBg = () => {
-    if (window.scrollY >= 40) {
+    if (window.scrollY >= 50) {
       setTopNav(true);
+      console.log(window.scrollY);
     } else {
       setTopNav(false);
     }

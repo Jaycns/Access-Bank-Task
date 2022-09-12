@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import AppContext from "../context/context";
 import Logo from "../images/logo_2.png";
 import { BsXLg } from "react-icons/bs";
-import { ModalBox, InputBox, CheckBox, ButtonFill } from "../styles/homeStyle";
+import { ModalBox, InputBox, CheckBox, ButtonFill } from "../styles/layoutStyles";
 
 function SignupModal() {
   const { handleLoginOpen, handleClose } = useContext(AppContext);

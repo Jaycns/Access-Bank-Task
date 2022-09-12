@@ -10,8 +10,8 @@ import {
   LastSection,
   Card,
   Footer,
-  ButtonFill,
 } from "../styles/homeStyle.js";
+import { ButtonFill } from "../styles/layoutStyles";
 
 import { ApiSection, ApiCard } from "../styles/homeStyle2";
 import Logo from "../images/logo.png";
@@ -23,7 +23,7 @@ import Four from "../images/four.svg";
 import first from "../images/first.svg";
 import second from "../images/second.svg";
 import third from "../images/third.svg";
-import logobg from "../images/Union.svg";
+import logobg from "../images/Union.png";
 import mbox from "../images/mbox.svg";
 import Inq from "../images/Inq.png";
 import Auth from "../images/authenticate.png";
@@ -66,8 +66,7 @@ function Home() {
           </Carousel>
         </FirstSection>
       ) : (
-        <FirstSection style={{ backgroundImage: `url(${Background})` }}>
-          <img className="logobg" src={logobg} alt="bg" />
+        <FirstSection style={{ backgroundImage: `url(${Background})`, backgroundSize: 'cover' }}>
           <div className="mbox" onClick={handleChatbox}>
             <img src={mbox} alt="mbox" className="chatbox" />
           </div>

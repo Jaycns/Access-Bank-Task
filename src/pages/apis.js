@@ -3,7 +3,7 @@ import "../App.scss";
 import Logo from "../images/logo.png";
 // import AppContext from "../context/context";
 import { FirstSection, Footer } from "../styles/homeStyle";
-import logobg from "../images/Union.svg";
+import logobg from "../images/Union.png";
 import Background from "../images/blurred-bg.png";
 import { BsChevronDown, BsQuestionSquare, BsKey } from "react-icons/bs";
 import { FiSearch } from "react-icons/fi";
