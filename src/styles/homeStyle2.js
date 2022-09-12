@@ -82,18 +82,19 @@ export const ApiCard = styled.div`
   background-color: rgba(0, 0, 0, 0.2);
 
   img {
-    transform: translateX(-12%);
-    transition: transform 1s ease;
+    left: -20%;
+    position: absolute;
+    transition: transform .5s ease;
     mix-blend-mode: multiply;
   }
 
   .tranx {
-    transform: translateX(-20%);
+    left: -30%;
     transition: transform 1s ease;
   }
   .textbox {
-    backdrop-filter: blur(15px);
-    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(20px);
+    background-color: rgba(255, 255, 255, 0.4);
     min-height: 5vh;
     width: 90%;
     margin: auto;
@@ -158,7 +159,7 @@ export const ApiCard = styled.div`
       transform: scale(1.1);
     }
     .textbox {
-      background-color: rgba(255, 255, 255, 0.8);
+      background-color: rgba(255, 255, 255, 0.7);
     }
   }
 `;
