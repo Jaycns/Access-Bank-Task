@@ -79,10 +79,12 @@ export const ApiCard = styled.div`
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
   overflow: hidden;
   transition: all 3s ease;
+  background-color: rgba(0, 0, 0, 0.2);
 
   img {
     transform: translateX(-12%);
     transition: transform 1s ease;
+    mix-blend-mode: multiply;
   }
 
   .tranx {
@@ -90,9 +92,8 @@ export const ApiCard = styled.div`
     transition: transform 1s ease;
   }
   .textbox {
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(15px);
     background-color: rgba(255, 255, 255, 0.6);
-    -webkit-backdrop-filter: blur(5px);
     min-height: 5vh;
     width: 90%;
     margin: auto;
@@ -109,6 +110,7 @@ export const ApiCard = styled.div`
       opacity: 1;
       font-size: 20px;
       font-weight: 500;
+      transition: color 0.5s ease;
     }
   }
   .span {
@@ -147,9 +149,13 @@ export const ApiCard = styled.div`
     .span {
       display: flex;
     }
+    p {
+      color: #10295f;
+    }
     img {
       ${"" /* width: 600px; */}
-      transform: scale(1.01);
+      mix-blend-mode: lighten;
+      transform: scale(1.1);
     }
     .textbox {
       background-color: rgba(255, 255, 255, 0.8);
