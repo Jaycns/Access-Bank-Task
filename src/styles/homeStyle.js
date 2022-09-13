@@ -249,6 +249,11 @@ export const SecondSection = styled.section`
     grid-template-columns: auto auto;
     gap: 4rem;
     justify-content: center;
+    transform: translateY(20%);
+    transition: transform 1s ease;
+  }
+  .flex-box.active {
+    transform: translateY(0%);
   }
   @media (max-width: 1300px) {
     .flex-box {

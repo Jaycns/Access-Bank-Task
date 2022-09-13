@@ -41,6 +41,7 @@ export const AppProvider = (props) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   const [topNav, setTopNav] = useState(false);
+  const [cardAnimation, setCardAnimation] = useState(false);
   const navBg = () => {
     if (window.scrollY >= 50) {
       setTopNav(true);
@@ -50,7 +51,15 @@ export const AppProvider = (props) => {
     }
   };
   window.addEventListener("scroll", navBg);
-
+  const Card = () => {
+    if (window.scrollY >= 350) {
+      setCardAnimation(true);
+      console.log(window.scrollY);
+    } else if (window.scrollY <= 250) {
+      setCardAnimation(false);
+    }
+  };
+  window.addEventListener("scroll", Card);
   const stateActions = {
     handleClose,
     handleOpen,
@@ -63,7 +72,15 @@ export const AppProvider = (props) => {
   };
   return (
     <AppContext.Provider
-      value={{ chatBox, modal, topNav, carousel, loginModal, ...stateActions }}
+      value={{
+        chatBox,
+        modal,
+        topNav,
+        cardAnimation,
+        carousel,
+        loginModal,
+        ...stateActions,
+      }}
     >
       {props.children}
     </AppContext.Provider>

@@ -34,8 +34,14 @@ import { AiOutlineRightCircle, AiFillRightCircle } from "react-icons/ai";
 const initialSideBarShow = window.matchMedia("(max-width: 780px)").matches;
 const Show = window.matchMedia("(max-width: 1300px)").matches;
 function Home() {
-  const { nextSlide, prevSlide, carousel, handleOpen, handleChatbox } =
-    useContext(AppContext);
+  const {
+    nextSlide,
+    prevSlide,
+    carousel,
+    handleOpen,
+    handleChatbox,
+    cardAnimation,
+  } = useContext(AppContext);
   return (
     <div className="home">
       {carousel === 0 ? (
@@ -102,7 +108,7 @@ function Home() {
       )}
       <SecondSection>
         <h1 className="header">What to expect</h1>
-        <div className="flex-box">
+        <div className={`flex-box ${cardAnimation ? "active" : ""}`}>
           <Card>
             <div className="top">
               <img src={One} alt="one" />
