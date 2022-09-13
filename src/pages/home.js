@@ -16,10 +16,10 @@ import { ButtonFill } from "../styles/layoutStyles";
 import { ApiSection, ApiCard } from "../styles/homeStyle2";
 import Logo from "../images/logo.png";
 import Background from "../images/background.png";
-import One from "../images/one.svg";
-import Two from "../images/two.svg";
-import Three from "../images/three.svg";
-import Four from "../images/four.svg";
+import One from "../images/debit-card.gif";
+import Two from "../images/create-order.gif";
+import Three from "../images/money.gif";
+import Four from "../images/money.gif";
 import first from "../images/first.svg";
 import second from "../images/second.svg";
 import third from "../images/third.svg";
@@ -66,7 +66,12 @@ function Home() {
           </Carousel>
         </FirstSection>
       ) : (
-        <FirstSection style={{ backgroundImage: `url(${Background})`, backgroundSize: 'cover' }}>
+        <FirstSection
+          style={{
+            backgroundImage: `url(${Background})`,
+            backgroundSize: "cover",
+          }}
+        >
           <div className="mbox" onClick={handleChatbox}>
             <img src={mbox} alt="mbox" className="chatbox" />
           </div>
@@ -99,32 +104,40 @@ function Home() {
         <h1 className="header">What to expect</h1>
         <div className="flex-box">
           <Card>
-            <img src={One} alt="one" />
-            <h1>Payment Initiation</h1>
+            <div className="top">
+              <img src={One} alt="one" />
+              <h1>Payment Initiation</h1>
+            </div>
             <p>
               Make and complete payments; cross border interbank
               <br /> and intrabank transfers
             </p>
           </Card>
           <Card>
-            <img src={Two} alt="Two" />
-            <h1>Balance Inquiries</h1>
+            <div className="top">
+              <img src={Two} alt="Two" />
+              <h1>Balance Inquiries</h1>
+            </div>
             <p>
               Check your account balance and self generate bank <br />
               statements
             </p>
           </Card>
           <Card>
-            <img src={Three} alt="Three" />
-            <h1>Transaction Inquiries</h1>
+            <div className="top">
+              <img src={Three} alt="Three" />
+              <h1>Transaction Inquiries</h1>
+            </div>
             <p>
               View your transactions and send payment avidence to <br />
               vendors and merchants
             </p>
           </Card>
           <Card>
-            <img src={Four} alt="four" />
-            <h1>Payment Reception</h1>
+            <div className="top">
+              <img src={Four} alt="four" />
+              <h1>Payment Reception</h1>
+            </div>
             <p>
               Create a merchant profile and receive payments via <br />
               AccessPay
@@ -137,41 +150,53 @@ function Home() {
         <div className="flex-box">
           <ApiCard className="card">
             <img src={Inq} alt="inq" />
-            <div className="textbox">
-              <p>Inquiries</p>
-              <div className="span">
-                <AiFillRightCircle className="hover" />
-                <AiOutlineRightCircle className="icon" /> <p>Learn More</p>
+            <div className="flowbox">
+              <div className="textbox">
+                <p>Inquiries</p>
+                <div className="span">
+                  <AiFillRightCircle className="hover" />
+                  <AiOutlineRightCircle className="icon" />{" "}
+                  <p className="p">Learn More</p>
+                </div>
               </div>
             </div>
           </ApiCard>
           <ApiCard className="card">
             <img src={Auth} alt="auth" />
-            <div className="textbox">
-              <p>Authentication</p>
-              <div className="span">
-                <AiFillRightCircle className="hover" />
-                <AiOutlineRightCircle className="icon" /> <p>Learn More</p>
+            <div className="flowbox">
+              <div className="textbox">
+                <p>Authentication</p>
+                <div className="span">
+                  <AiFillRightCircle className="hover" />
+                  <AiOutlineRightCircle className="icon" />{" "}
+                  <p className="p">Learn More</p>
+                </div>
               </div>
             </div>
           </ApiCard>
           <ApiCard className="card">
             <img src={Partners} alt="tranx" className="tranx" />
-            <div className="textbox">
-              <p>Partners</p>
-              <div className="span">
-                <AiFillRightCircle className="hover" />
-                <AiOutlineRightCircle className="icon" /> <p>Learn More</p>
+            <div className="flowbox">
+              <div className="textbox">
+                <p>Partners</p>
+                <div className="span">
+                  <AiFillRightCircle className="hover" />
+                  <AiOutlineRightCircle className="icon" />{" "}
+                  <p className="p">Learn More</p>
+                </div>
               </div>
             </div>
           </ApiCard>
           <ApiCard className="card">
             <img src={Tranx} alt="tranx" className="tranx" />
-            <div className="textbox">
-              <p>Transactions</p>
-              <div className="span">
-                <AiFillRightCircle className="hover" />
-                <AiOutlineRightCircle className="icon" /> <p>Learn More</p>
+            <div className="flowbox">
+              <div className="textbox">
+                <p>Transactions</p>
+                <div className="span">
+                  <AiFillRightCircle className="hover" />
+                  <AiOutlineRightCircle className="icon" />{" "}
+                  <p className="p">Learn More</p>
+                </div>
               </div>
             </div>
           </ApiCard>

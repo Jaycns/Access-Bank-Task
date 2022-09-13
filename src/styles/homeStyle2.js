@@ -80,11 +80,13 @@ export const ApiCard = styled.div`
   overflow: hidden;
   transition: all 3s ease;
   background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
 
   img {
     left: -20%;
     position: absolute;
-    transition: transform .5s ease;
+    transition: transform 0.5s ease;
     mix-blend-mode: multiply;
   }
 
@@ -92,12 +94,18 @@ export const ApiCard = styled.div`
     left: -30%;
     transition: transform 1s ease;
   }
+  .flowbox {
+    margin: 0.8rem;
+    width: 100%;
+    height: 280px;
+    position: relative;
+    overflow: hidden;
+  }
   .textbox {
     backdrop-filter: blur(20px);
     background-color: rgba(255, 255, 255, 0.4);
     min-height: 5vh;
-    width: 90%;
-    margin: auto;
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -105,17 +113,17 @@ export const ApiCard = styled.div`
     align-items: flex-start;
     position: absolute;
     bottom: 5%;
-    left: 5%;
-    transition: background-color 0.5s ease;
+    left: 0%;
+    transform: translateY(60%);
+    transition: all 0.6s ease;
     p {
-      opacity: 1;
       font-size: 20px;
       font-weight: 500;
       transition: color 0.5s ease;
     }
   }
   .span {
-    display: none;
+    display: flex;
     align-items: center;
     gap: 0.5rem;
     transition: all 2s ease;
@@ -133,7 +141,7 @@ export const ApiCard = styled.div`
       transition: all 0.5s ease;
       display: none;
     }
-    p {
+    .p {
       font-weight: 300;
       font-size: 18px;
     }
@@ -147,11 +155,9 @@ export const ApiCard = styled.div`
     }
   }
   &:hover {
-    .span {
-      display: flex;
-    }
     p {
-      color: #10295f;
+      color: #1d2758;
+      font-weight: 600;
     }
     img {
       ${"" /* width: 600px; */}
@@ -160,6 +166,7 @@ export const ApiCard = styled.div`
     }
     .textbox {
       background-color: rgba(255, 255, 255, 0.7);
+      transform: translateY(20%);
     }
   }
 `;

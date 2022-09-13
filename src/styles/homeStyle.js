@@ -14,9 +14,9 @@ export const FirstSection = styled.section`
     position: absolute;
     right: -10%;
     bottom: -13%;
-    mix-blend-mode: lighten;
     overflow: hidden;
-    opacity: 0.5;
+    mix-blend-mode: screen;
+    opacity: 0.1;
     width: 900px;
     @media (max-width: 1300px) {
       width: 750px;
@@ -232,7 +232,7 @@ export const Main = styled.main`
 `;
 export const SecondSection = styled.section`
   width: 100%;
-  min-height: 90vh;
+  min-height: 80vh;
   background-color: #f6f7ff;
   padding: 6rem 4rem;
   text-align: center;
@@ -275,25 +275,35 @@ export const Card = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  text-align: center;
-  gap: 0.8rem;
-  box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  gap: 2rem;
+  background: white;
+  box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(245, 130, 31, 0);
   border-radius: 10px;
-  padding: 2rem 2rem 6rem;
+  padding: 3rem;
   transition: 0.3s ease-in-out;
-
+  .top {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+    img {
+      width: 50px;
+    }
+  }
   h1 {
-    font-weight: 400;
-    font-size: 32px;
+    font-weight: 500;
+    font-size: 36px;
     color: #10295f;
     opacity: 0.9;
   }
   p {
-    font-weight: 200;
-    font-size: 18px;
+    font-weight: 300;
+    font-size: 20px;
+    color: #3b404a;
     opacity: 1;
+    line-height: 2rem;
     margin-top: 0;
   }
   @media (max-width: 1300px) {
@@ -327,7 +337,6 @@ export const ThirdSection = styled.section`
   text-align: center;
   background-color: #f6f7ff;
   box-shadow: 0px 10px 15px 15px rgba(0, 0, 0, 0.1);
-  border-bottom: 8px solid #10295f;
   color: #1d2758;
   h1 {
     font-size: 36px;
@@ -360,7 +369,7 @@ export const ThirdSection = styled.section`
       letter-spacing: 1.6px;
     }
     p {
-      font-weight: 200;
+      font-weight: 300;
       letter-spacing: 1%;
       font-size: 20px;
       opacity: 0.8;
@@ -434,7 +443,7 @@ export const LastSection = styled.section`
   overflow: hidden;
   .logobg {
     left: 2%;
-    opacity: 0.2;
+    opacity: 0.4;
     position: absolute;
     width: 620px;
     @media (max-width: 768px) {
