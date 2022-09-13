@@ -337,7 +337,7 @@ export const ThirdSection = styled.section`
   text-align: center;
   background-color: #f6f7ff;
   box-shadow: 0px 10px 15px 15px rgba(0, 0, 0, 0.1);
-  color: #1d2758;
+  color: #10295f;
   h1 {
     font-size: 36px;
     font-weight: 600;
@@ -364,18 +364,18 @@ export const ThirdSection = styled.section`
     }
     h2 {
       font-size: 32px;
-      font-weight: 600;
-      opacity: 0.7;
+      font-weight: 700;
       letter-spacing: 1.6px;
     }
     p {
       font-weight: 300;
       letter-spacing: 1%;
       font-size: 20px;
-      opacity: 0.8;
+      opacity: 0.7;
+      color: #000;
       width: 50%;
       text-align: center;
-      line-height: 2rem;
+      line-height: 32px;
     }
   }
   @media (max-width: 1300px) {
@@ -428,19 +428,29 @@ export const ThirdSection = styled.section`
 export const LastSection = styled.section`
   position: relative;
   background-color: #f5821f;
-  display: flex;
   height: 60vh;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 2rem;
-  letter-spacing: 1%;
-  color: white;
-  font-size: 32px;
-  font-weight: 500;
-  padding: 8rem;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+
+  .flex-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    width: 50rem;
+    margin: auto;
+    h1 {
+      font-size: 32px;
+      text-align: center;
+      line-height: 3rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      color: white;
+    }
+  }
+
   .logobg {
     left: 2%;
     opacity: 0.4;

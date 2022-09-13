@@ -229,15 +229,16 @@ function Home() {
         </div>
       </ThirdSection>
       <LastSection>
-        Start integrating with our APIs now and grow <br />
-        your business
-        <ButtonFill
-          bg="#10295F"
-          width={initialSideBarShow ? "7rem" : Show ? "8rem" : "12rem"}
-          onClick={handleOpen}
-        >
-          Join us
-        </ButtonFill>
+        <div className="flex-box">
+          <h1>Start integrating with our APIs now and grow your business</h1>
+          <ButtonFill
+            bg="#10295F"
+            width={initialSideBarShow ? "7rem" : Show ? "8rem" : "12rem"}
+            onClick={handleOpen}
+          >
+            Join us
+          </ButtonFill>
+        </div>
         <img className="logobg" src={logobg} alt="bg" />
       </LastSection>
       <Footer>
