@@ -45,16 +45,14 @@ export const AppProvider = (props) => {
   const navBg = () => {
     if (window.scrollY >= 50) {
       setTopNav(true);
-      console.log(window.scrollY);
     } else {
       setTopNav(false);
     }
   };
   window.addEventListener("scroll", navBg);
   const Card = () => {
-    if (window.scrollY >= 350) {
+    if (window.scrollY >= 340) {
       setCardAnimation(true);
-      console.log(window.scrollY);
     } else if (window.scrollY <= 250) {
       setCardAnimation(false);
     }

@@ -1,18 +1,20 @@
 import styled from "styled-components";
 
 export const ApiSection = styled.section`
-  height: 80vh;
+  min-height: 80vh;
   width: 100%;
-  padding: 6rem 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4rem;
   box-shadow: 0px 10px 15px 15px rgba(0, 0, 0, 0.1);
   @media (max-width: 768px) {
-    height: auto;
+    padding: 4rem;
   }
   .header {
     color: #a4c519;
     font-size: 36px;
     text-align: center;
-    margin: 4rem;
     letter-spacing: 2px;
     text-transform: uppercase;
     font-weight: 500;
@@ -27,7 +29,6 @@ export const ApiSection = styled.section`
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 6rem;
     gap: 0.4rem;
     cursor: pointer;
     .hover {

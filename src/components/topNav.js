@@ -7,6 +7,10 @@ import { TopNav, Nav } from "../styles/layoutStyles";
 function Top() {
   const { topNav, handleOpen, handleLoginOpen } = useContext(AppContext);
   const [activeNav, setActiveNav] = useState("/");
+  const [menu, setMenu] = useState(false);
+  const handleMenu = () => {
+    setMenu(!menu);
+  };
   const handleNav = (e) => {
     setActiveNav(e.target.getAttribute("id"));
     console.log(activeNav);
@@ -15,6 +19,14 @@ function Top() {
     <>
       <TopNav className={`header ${topNav ? "active" : ""}`}>
         <img src={Logo} alt="Logo" />
+        <div
+          className={`hamburger ${menu ? "active" : ""}`}
+          onClick={handleMenu}
+        >
+          <span className="line1"></span>
+          <span className="line2"></span>
+          <span className="line3"></span>
+        </div>
         <Nav>
           <Link
             to="/"

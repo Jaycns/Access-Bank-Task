@@ -145,6 +145,7 @@ export const Button = styled.button`
     padding: 0.6rem 0.8rem;
     font-size: 11px;
     letter-spacing: 2px;
+    display: none;
   }
   @media (max-width: 328px) {
     font-size: 8px;
@@ -232,14 +233,14 @@ export const Main = styled.main`
 `;
 export const SecondSection = styled.section`
   width: 100%;
-  min-height: 80vh;
+  min-height: 90vh;
   background-color: #f6f7ff;
   padding: 6rem 4rem;
   text-align: center;
   color: #10295f;
   .header {
     color: #f5821f;
-    margin-bottom: 4rem;
+    margin-bottom: 6rem;
     font-size: 36px;
     font-weight: 600;
     text-transform: uppercase;
@@ -266,6 +267,7 @@ export const SecondSection = styled.section`
     }
   }
   @media (max-width: 768px) {
+    padding: 4rem;
     .flex-box {
       display: flex;
       flex-direction: column;
@@ -322,6 +324,11 @@ export const Card = styled.div`
     }
   }
   @media (max-width: 768px) {
+    text-align: center;
+    .top {
+      justify-content: center;
+      flex-direction: column;
+    }
     h1 {
       font-weight: 300;
       font-size: 28px;
@@ -391,13 +398,13 @@ export const ThirdSection = styled.section`
     .holder {
       h2 {
         font-size: 28px;
-        font-weight: 300;
         opacity: 0.8;
       }
       p {
         font-size: 15px;
         font-weight: 200;
         opacity: 0.9;
+        width: 60%;
       }
     }
     img {
@@ -413,13 +420,14 @@ export const ThirdSection = styled.section`
     .holder {
       h2 {
         font-size: 24px;
-        font-weight: 300;
         opacity: 0.8;
+        font-weight: 500;
       }
       p {
         font-size: 13px;
         font-weight: 200;
         opacity: 0.9;
+        width: 80%;
       }
     }
     img {
@@ -427,6 +435,7 @@ export const ThirdSection = styled.section`
     }
     .flex-box {
       flex-direction: column;
+      gap: 4rem;
     }
   }
 `;
@@ -467,13 +476,22 @@ export const LastSection = styled.section`
   }
 
   @media (max-width: 1300px) {
-    text-align: center;
-    font-size: 24px;
+    .flex-box h1 {
+      text-align: center;
+      font-size: 24px;
+    }
   }
   @media (max-width: 768px) {
-    font-size: 18px;
-    padding: 2rem;
-    text-align: center;
+    .flex-box {
+      gap: 0.1rem;
+      h1 {
+        font-size: 20px;
+        font-weight: 500;
+        padding: 2rem;
+        text-align: center;
+        line-height: 1.5rem;
+      }
+    }
   }
 `;
 export const Footer = styled.footer`
@@ -495,6 +513,7 @@ export const Footer = styled.footer`
     }
   }
   @media (max-width: 768px) {
+    padding-right: 2rem;
     height: 12vh;
     img {
       width: 100px;

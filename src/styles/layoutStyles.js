@@ -252,6 +252,47 @@ export const TopNav = styled.div`
     width: 160px;
     height: 57px;
   }
+  .hamburger {
+    position: absolute;
+    z-index: 999;
+    right: 10%;
+    display: none;
+    flex-direction: column;
+    gap: 0.2rem;
+    transition: all 0.5s ease;
+    span {
+      background-color: #fff;
+      width: 12px;
+      height: 3px;
+    }
+    .line1 {
+      transition: transform 0.5s ease;
+    }
+    .line2 {
+      width: 22px;
+      transition: transform 0.5s ease;
+    }
+    .line3 {
+      align-self: flex-end;
+      transition: transform 0.5s ease;
+    }
+  }
+  .hamburger.active {
+    gap: 0;
+    span {
+      width: 14px;
+    }
+    .line1 {
+      transform: rotate(45deg);
+    }
+    .line2 {
+      transform: rotate(-45deg);
+      width: 22px;
+    }
+    .line3 {
+      transform: rotate(45deg);
+    }
+  }
   @media (max-width: 1300px) {
     img {
       width: 100px;
@@ -259,6 +300,9 @@ export const TopNav = styled.div`
     }
   }
   @media (max-width: 768px) {
+    .hamburger {
+      display: flex;
+    }
     img {
       width: 100px;
       height: 35px;
@@ -309,4 +353,3 @@ export const Nav = styled.div`
     display: none;
   }
 `;
-

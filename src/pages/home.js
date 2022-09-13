@@ -19,7 +19,7 @@ import Background from "../images/background.png";
 import One from "../images/debit-card.gif";
 import Two from "../images/create-order.gif";
 import Three from "../images/money.gif";
-import Four from "../images/money.gif";
+import Four from "../images/bal_inq.gif";
 import first from "../images/first.svg";
 import second from "../images/second.svg";
 import third from "../images/third.svg";
@@ -46,7 +46,7 @@ function Home() {
     <div className="home">
       {carousel === 0 ? (
         <FirstSection>
-          <img className="logobg" src={logobg} alt="bg" />
+          <img className="logobg" src={ logobg } alt="bg" />
           <div className="mbox" onClick={handleChatbox}>
             <img src={mbox} alt="mbox" className="chatbox" />
           </div>
