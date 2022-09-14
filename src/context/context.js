@@ -9,11 +9,13 @@ export const AppProvider = (props) => {
   const handleOpen = () => {
     setModal(true);
     setLoginModal(false);
+    handleMenuClose();
   };
   const handleClose = () => setModal(false);
   const handleLoginOpen = () => {
     setLoginModal(true);
     setModal(false);
+    handleMenuClose();
   };
   const handleLoginClose = () => setLoginModal(false);
   const [carousel, setCarousel] = useState(0);

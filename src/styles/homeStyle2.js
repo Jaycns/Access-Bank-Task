@@ -9,7 +9,9 @@ export const ApiSection = styled.section`
   gap: 4rem;
   box-shadow: 0px 10px 15px 15px rgba(0, 0, 0, 0.1);
   @media (max-width: 768px) {
-    padding: 4rem;
+    padding: 2rem;
+    min-height: 30vh;
+    gap: 2rem;
   }
   .header {
     color: #a4c519;
@@ -53,7 +55,7 @@ export const ApiSection = styled.section`
   @media (max-width: 1300px) {
     .header {
       font-size: 28px;
-      margin: 3rem;
+      margin: 2rem;
     }
   }
   @media (max-width: 768px) {
@@ -62,13 +64,21 @@ export const ApiSection = styled.section`
         font-size: 16px;
       }
     }
+    .scroller {
+      position: relative;
+      overflow: scroll;
+      width: 100%;
+      height: 50vh;
+    }
     .flex-box {
-      flex-direction: column;
       align-items: center;
+      position: absolute;
+      z-index: 800;
+      gap: 1.6rem;
     }
     .header {
       font-size: 24px;
-      margin: 2rem;
+      margin: 0rem;
     }
   }
 `;
@@ -83,7 +93,10 @@ export const ApiCard = styled.div`
   background-color: rgba(0, 0, 0, 0.2);
   display: flex;
   justify-content: center;
-
+  @media (max-width: 768px) {
+    width: 250px;
+    border-radius: 10px;
+  }
   img {
     left: -20%;
     position: absolute;

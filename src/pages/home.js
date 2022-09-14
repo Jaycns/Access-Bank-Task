@@ -20,9 +20,9 @@ import One from "../images/debit-card.gif";
 import Two from "../images/create-order.gif";
 import Three from "../images/money.gif";
 import Four from "../images/bal_inq.gif";
-import first from "../images/first.svg";
-import second from "../images/second.svg";
-import third from "../images/third.svg";
+import first from "../images/test.svg";
+import second from "../images/subscribe.svg";
+import third from "../images/integrate.svg";
 import logobg from "../images/Union.png";
 import mbox from "../images/mbox.svg";
 import Inq from "../images/Inq.png";
@@ -46,7 +46,7 @@ function Home() {
     <div className="home">
       {carousel === 0 ? (
         <FirstSection>
-          <img className="logobg" src={ logobg } alt="bg" />
+          <img className="logobg" src={logobg} alt="bg" />
           <div className="mbox" onClick={handleChatbox}>
             <img src={mbox} alt="mbox" className="chatbox" />
           </div>
@@ -153,59 +153,62 @@ function Home() {
       </SecondSection>
       <ApiSection>
         <h1 className="header">Api Categories</h1>
-        <div className="flex-box">
-          <ApiCard className="card">
-            <img src={Inq} alt="inq" />
-            <div className="flowbox">
-              <div className="textbox">
-                <p>Inquiries</p>
-                <div className="span">
-                  <AiFillRightCircle className="hover" />
-                  <AiOutlineRightCircle className="icon" />{" "}
-                  <p className="p">Learn More</p>
+        <div className="scroller">
+          <div className="flex-box">
+            <ApiCard className="card">
+              <img src={Inq} alt="inq" />
+              <div className="flowbox">
+                <div className="textbox">
+                  <p>Inquiries</p>
+                  <div className="span">
+                    <AiFillRightCircle className="hover" />
+                    <AiOutlineRightCircle className="icon" />{" "}
+                    <p className="p">Learn More</p>
+                  </div>
                 </div>
               </div>
-            </div>
-          </ApiCard>
-          <ApiCard className="card">
-            <img src={Auth} alt="auth" />
-            <div className="flowbox">
-              <div className="textbox">
-                <p>Authentication</p>
-                <div className="span">
-                  <AiFillRightCircle className="hover" />
-                  <AiOutlineRightCircle className="icon" />{" "}
-                  <p className="p">Learn More</p>
+            </ApiCard>
+
+            <ApiCard className="card">
+              <img src={Auth} alt="auth" />
+              <div className="flowbox">
+                <div className="textbox">
+                  <p>Authentication</p>
+                  <div className="span">
+                    <AiFillRightCircle className="hover" />
+                    <AiOutlineRightCircle className="icon" />{" "}
+                    <p className="p">Learn More</p>
+                  </div>
                 </div>
               </div>
-            </div>
-          </ApiCard>
-          <ApiCard className="card">
-            <img src={Partners} alt="tranx" className="tranx" />
-            <div className="flowbox">
-              <div className="textbox">
-                <p>Partners</p>
-                <div className="span">
-                  <AiFillRightCircle className="hover" />
-                  <AiOutlineRightCircle className="icon" />{" "}
-                  <p className="p">Learn More</p>
+            </ApiCard>
+            <ApiCard className="card">
+              <img src={Partners} alt="tranx" className="tranx" />
+              <div className="flowbox">
+                <div className="textbox">
+                  <p>Partners</p>
+                  <div className="span">
+                    <AiFillRightCircle className="hover" />
+                    <AiOutlineRightCircle className="icon" />{" "}
+                    <p className="p">Learn More</p>
+                  </div>
                 </div>
               </div>
-            </div>
-          </ApiCard>
-          <ApiCard className="card">
-            <img src={Tranx} alt="tranx" className="tranx" />
-            <div className="flowbox">
-              <div className="textbox">
-                <p>Transactions</p>
-                <div className="span">
-                  <AiFillRightCircle className="hover" />
-                  <AiOutlineRightCircle className="icon" />{" "}
-                  <p className="p">Learn More</p>
+            </ApiCard>
+            <ApiCard className="card">
+              <img src={Tranx} alt="tranx" className="tranx" />
+              <div className="flowbox">
+                <div className="textbox">
+                  <p>Transactions</p>
+                  <div className="span">
+                    <AiFillRightCircle className="hover" />
+                    <AiOutlineRightCircle className="icon" />{" "}
+                    <p className="p">Learn More</p>
+                  </div>
                 </div>
               </div>
-            </div>
-          </ApiCard>
+            </ApiCard>
+          </div>
         </div>
         <div className="view-box">
           <AiFillRightCircle className="hover" />

@@ -228,6 +228,7 @@ export const Main = styled.main`
     p {
       font-size: 14px;
       font-weight: 200;
+      opacity: 1;
     }
   }
 `;
@@ -267,14 +268,16 @@ export const SecondSection = styled.section`
     }
   }
   @media (max-width: 768px) {
-    padding: 4rem;
+    padding: 4rem 2rem;
     .flex-box {
       display: flex;
       flex-direction: column;
+      gap: 1rem;
     }
     .header {
       font-size: 24px;
-      margin: 2rem;
+      margin: 0rem;
+      margin-bottom: 2rem;
     }
   }
 `;
@@ -300,7 +303,7 @@ export const Card = styled.div`
     }
   }
   h1 {
-    font-weight: 500;
+    font-weight: 600;
     font-size: 36px;
     color: #10295f;
     opacity: 0.9;
@@ -325,17 +328,17 @@ export const Card = styled.div`
   }
   @media (max-width: 768px) {
     text-align: center;
+    padding: 2rem;
     .top {
       justify-content: center;
       flex-direction: column;
     }
     h1 {
-      font-weight: 300;
+      font-weight: 400;
       font-size: 28px;
     }
     p {
-      font-weight: 200;
-      opacity: 0.8;
+      font-weight: 300;
       font-size: 13px;
     }
   }
@@ -383,7 +386,6 @@ export const ThirdSection = styled.section`
       font-weight: 300;
       letter-spacing: 1%;
       font-size: 20px;
-      opacity: 0.7;
       color: #000;
       width: 50%;
       text-align: center;
@@ -413,6 +415,7 @@ export const ThirdSection = styled.section`
   }
   @media (max-width: 768px) {
     height: auto;
+    padding: 2rem;
     h1 {
       font-size: 24px;
       letter-spacing: 2px;
@@ -431,7 +434,7 @@ export const ThirdSection = styled.section`
       }
     }
     img {
-      width: 60px;
+      width: 80px !important;
     }
     .flex-box {
       flex-direction: column;

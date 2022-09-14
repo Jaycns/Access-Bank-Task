@@ -355,7 +355,7 @@ export const Nav = styled.div`
 `;
 export const SideBar = styled.div`
   position: fixed;
-  top: 9%;
+  top: 10%;
   width: 100%;
   z-index: 900;
   background-image: linear-gradient(to right, rgb(16, 41, 95), rgb(4, 14, 34));
@@ -366,13 +366,13 @@ export const SideBar = styled.div`
   .box {
     display: flex;
     justify-content: space-between;
-    padding: 2rem 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 1.6rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     padding-right: 2rem;
 
     a,
     p {
-      font-size: 16px;
+      font-size: 14px;
       letter-spacing: 2px;
       font-weight: 300;
       text-transform: uppercase;
