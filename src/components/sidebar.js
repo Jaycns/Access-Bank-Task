@@ -5,7 +5,7 @@ import { SideBar } from "../styles/layoutStyles";
 import { AiOutlineRight } from "react-icons/ai";
 import { Link } from "react-router-dom";
 function Sidebar() {
-  const { menu, activeNav, handleNav } =
+  const { menu, activeNav, handleNav, handleLoginOpen } =
     useContext(AppContext);
   return (
     <>
@@ -66,7 +66,7 @@ function Sidebar() {
           <AiOutlineRight className="icon" />
         </div>
         <div className="box signin">
-          <p>Sign In</p>
+          <p onClick={handleLoginOpen}>Sign In</p>
           <AiOutlineRight className="icon" />
         </div>
       </SideBar>

@@ -44,6 +44,21 @@ export const Header = styled.div`
       margin: 2rem 3rem;
     }
   }
+  @media (max-width: 768px) {
+    img {
+      transform: translate(0%, 0%);
+      top: 0;
+    }
+    .text-box {
+      margin: 2rem;
+      h1 {
+        font-size: 28px;
+      }
+      p {
+        font-size: 16px;
+      }
+    }
+  }
 `;
 export const Mainer = styled.div`
   padding: 1rem 10rem;
@@ -59,6 +74,9 @@ export const Mainer = styled.div`
   @media (max-width: 1024px) {
     padding: 1rem;
   }
+  @media (max-width: 768px) {
+    padding: 0.6rem;
+  }
   .sidebar {
     background-color: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(15px);
@@ -68,6 +86,9 @@ export const Mainer = styled.div`
     padding: 6rem 1rem;
     @media (max-width: 1300px) {
       width: 30%;
+    }
+    @media (max-width: 768px) {
+      display: none;
     }
     h1 {
       text-align: right;
@@ -129,7 +150,11 @@ export const Mainer = styled.div`
     display: flex;
     flex-direction: column;
     gap: 2rem;
-
+    @media (max-width: 768px) {
+      width: 100% !important;
+      padding: 2rem 0rem;
+      margin-top: 4rem;
+    }
     .search-box {
       width: 40rem;
       padding: 1.2rem;
@@ -159,6 +184,16 @@ export const Mainer = styled.div`
       width: 80%;
       .search-box {
         width: 80%;
+      }
+    }
+    @media (max-width: 768px) {
+      .search-box {
+        width: 100%;
+        padding: 0.8rem;
+        margin-top: -7rem;
+        input {
+          font-size: 16px;
+        }
       }
     }
     .grid-box {
@@ -221,6 +256,16 @@ export const Mainer = styled.div`
       @media (max-width: 1030px) {
         grid-template-columns: auto auto;
         gap: 3rem;
+      }
+      @media (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+        margin: 2rem 0;
+        .apibox {
+        }
       }
     }
   }
