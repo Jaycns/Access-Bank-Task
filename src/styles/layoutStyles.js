@@ -353,3 +353,43 @@ export const Nav = styled.div`
     display: none;
   }
 `;
+export const SideBar = styled.div`
+  position: fixed;
+  top: 9%;
+  width: 100%;
+  z-index: 900;
+  background-image: linear-gradient(to right, rgb(16, 41, 95), rgb(4, 14, 34));
+  backdrop-filter: blur(50px);
+  padding-left: 2rem;
+  color: #fff;
+  transition: transform 0.6s ease;
+  .box {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-right: 2rem;
+
+    a,
+    p {
+      font-size: 16px;
+      letter-spacing: 2px;
+      font-weight: 300;
+      text-transform: uppercase;
+    }
+    a {
+      text-decoration: none;
+      color: #fff;
+    }
+    .active {
+      color: #f5821f;
+    }
+    .icon {
+      color: #f9f8f8;
+      opacity: 0.5;
+    }
+  }
+  .box.signin {
+    border-bottom: none;
+  }
+`;

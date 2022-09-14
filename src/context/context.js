@@ -58,6 +58,19 @@ export const AppProvider = (props) => {
     }
   };
   window.addEventListener("scroll", Card);
+  const [menu, setMenu] = useState(false);
+  const handleMenu = () => {
+    setMenu(!menu);
+  };
+  const handleMenuClose = () => {
+    setMenu(false);
+  };
+  const [activeNav, setActiveNav] = useState("/");
+
+  const handleNav = (e) => {
+    setActiveNav(e.target.getAttribute("id"));
+    handleMenuClose();
+  };
   const stateActions = {
     handleClose,
     handleOpen,
@@ -67,6 +80,9 @@ export const AppProvider = (props) => {
     prevSlide,
     handleLoginClose,
     handleLoginOpen,
+    handleMenu,
+    handleMenuClose,
+    handleNav,
   };
   return (
     <AppContext.Provider
@@ -77,6 +93,8 @@ export const AppProvider = (props) => {
         cardAnimation,
         carousel,
         loginModal,
+        menu,
+        activeNav,
         ...stateActions,
       }}
     >

@@ -3,15 +3,18 @@ import Top from "./topNav";
 import LoginModal from "../components/loginmodal";
 import SignUpModal from "../components/signupmodal";
 import { Modal } from "@mui/material";
+import Sidebar from "./sidebar";
 import AppContext from "../context/context";
+import "../styles/layout.scss";
 
 const Layout = ({ children }) => {
-  const { modal, handleClose, handleLoginClose, loginModal } =
+  const { modal, handleClose, handleLoginClose, loginModal} =
     useContext(AppContext);
   return (
     <>
-      <div>
+      <div className="layout">
         <Top />
+        <Sidebar />
         <Modal
           open={modal}
           onClose={handleClose}

@@ -1,20 +1,20 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import AppContext from "../context/context";
 import Logo from "../images/logo.png";
 import { Link } from "react-router-dom";
 import { ButtonGroup, Button } from "../styles/homeStyle.js";
 import { TopNav, Nav } from "../styles/layoutStyles";
 function Top() {
-  const { topNav, handleOpen, handleLoginOpen } = useContext(AppContext);
-  const [activeNav, setActiveNav] = useState("/");
-  const [menu, setMenu] = useState(false);
-  const handleMenu = () => {
-    setMenu(!menu);
-  };
-  const handleNav = (e) => {
-    setActiveNav(e.target.getAttribute("id"));
-    console.log(activeNav);
-  };
+  const {
+    topNav,
+    handleOpen,
+    handleLoginOpen,
+    handleMenu,
+    menu,
+    activeNav,
+    handleNav,
+  } = useContext(AppContext);
+
   return (
     <>
       <TopNav className={`header ${topNav ? "active" : ""}`}>
