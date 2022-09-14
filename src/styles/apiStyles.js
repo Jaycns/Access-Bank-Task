@@ -81,6 +81,8 @@ export const Mainer = styled.div`
     background-color: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(15px);
     width: 20%;
+    transform: translate(0px, 0px);
+    position: relative;
     border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.2);
     padding: 6rem 1rem;
@@ -149,6 +151,7 @@ export const Mainer = styled.div`
     border: 0.5px solid rgba(255, 255, 255, 0.2);
     display: flex;
     flex-direction: column;
+    position: relative;
     gap: 2rem;
     @media (max-width: 768px) {
       width: 100% !important;
@@ -258,12 +261,14 @@ export const Mainer = styled.div`
         gap: 3rem;
       }
       @media (max-width: 768px) {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 3rem;
-        margin: 2rem 0;
+         {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 3rem;
+          margin: 2rem 0;
+        }
         .apibox {
         }
       }
