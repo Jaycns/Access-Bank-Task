@@ -45,6 +45,7 @@ export const Header = styled.div`
     }
   }
   @media (max-width: 768px) {
+    align-items: center;
     img {
       transform: translate(0%, 0%);
       top: 0;
@@ -270,6 +271,9 @@ export const Mainer = styled.div`
           margin: 2rem 0;
         }
         .apibox {
+          img {
+            transform: translate(-10%, 30%);
+          }
         }
       }
     }

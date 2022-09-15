@@ -59,6 +59,11 @@ export const ApiSection = styled.section`
     }
   }
   @media (max-width: 768px) {
+    .header {
+      font-size: 24px;
+      margin: 0rem;
+      margin-top: 2rem;
+    }
     .view-box {
       p {
         font-size: 16px;
@@ -73,12 +78,20 @@ export const ApiSection = styled.section`
     .flex-box {
       align-items: center;
       position: absolute;
-      z-index: 800;
+      z-index: 600;
       gap: 1.6rem;
-    }
-    .header {
-      font-size: 24px;
-      margin: 0rem;
+      animation: scrolls 15s infinite 2s alternate;
+      @keyframes scrolls {
+        0% {
+          transform: translateX(1%);
+        }
+        100% {
+          transform: translateX(-73%);
+        }
+      }
+      :hover {
+        animation-play-state: paused;
+      }
     }
   }
 `;

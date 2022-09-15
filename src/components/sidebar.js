@@ -10,7 +10,7 @@ function Sidebar() {
   return (
     <>
       <SideBar className={menu ? "" : "sidebar"}>
-        <div className="box">
+        {/* <div className="box">
           <Link
             to="/"
             id="/"
@@ -20,7 +20,7 @@ function Sidebar() {
             Home
           </Link>{" "}
           <AiOutlineRight className="icon" />
-        </div>
+        </div> */}
         <div className="box">
           <Link
             to="/apis"

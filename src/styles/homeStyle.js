@@ -35,6 +35,7 @@ export const FirstSection = styled.section`
     right: 10%;
     bottom: 10%;
     height: 5rem;
+    z-index: 1001;
   }
   .chatbox {
     animation: jump 2s ease-in-out infinite alternate 5s;
@@ -82,6 +83,9 @@ export const Carousel = styled.div`
       background-color: #f6f7f3;
       box-shadow: 0px 0px 3px 1px #f6f7f3;
     }
+  }
+  @media (max-width: 768px) {
+    margin-top: -6rem;
   }
 `;
 
@@ -228,6 +232,8 @@ export const Main = styled.main`
     p {
       font-size: 14px;
       font-weight: 200;
+      line-height: 1.4rem;
+      margin-top: 1.2rem;
       opacity: 1;
     }
   }
@@ -243,7 +249,7 @@ export const SecondSection = styled.section`
     color: #f5821f;
     margin-bottom: 6rem;
     font-size: 36px;
-    font-weight: 600;
+    font-weight: 700;
     text-transform: uppercase;
   }
   .flex-box {
@@ -329,16 +335,18 @@ export const Card = styled.div`
   @media (max-width: 768px) {
     text-align: center;
     padding: 2rem;
+    gap: 0.8rem;
     .top {
       justify-content: center;
       flex-direction: column;
     }
     h1 {
-      font-weight: 400;
-      font-size: 28px;
+      font-weight: 600;
+      font-size: 26px;
     }
     p {
-      font-weight: 300;
+      font-weight: 400;
+      line-height: 1.4rem;
       font-size: 13px;
     }
   }
@@ -386,7 +394,7 @@ export const ThirdSection = styled.section`
       font-weight: 300;
       letter-spacing: 1%;
       font-size: 20px;
-      color: #000;
+      color: #3b404a;
       width: 50%;
       text-align: center;
       line-height: 32px;
@@ -417,19 +425,20 @@ export const ThirdSection = styled.section`
     height: auto;
     padding: 2rem;
     h1 {
+      margin-top: 1.6rem;
       font-size: 24px;
       letter-spacing: 2px;
     }
     .holder {
       h2 {
-        font-size: 24px;
-        opacity: 0.8;
-        font-weight: 500;
+        font-size: 27px;
+        font-weight: 700;
+        margin-bottom: 0.6rem;
       }
       p {
         font-size: 13px;
-        font-weight: 200;
-        opacity: 0.9;
+        font-weight: 300;
+        line-height: 1.4rem;
         width: 80%;
       }
     }
@@ -474,7 +483,8 @@ export const LastSection = styled.section`
     position: absolute;
     width: 620px;
     @media (max-width: 768px) {
-      display: none;
+      width: 400px;
+      left: -30%;
     }
   }
 

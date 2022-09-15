@@ -300,6 +300,10 @@ export const TopNav = styled.div`
     }
   }
   @media (max-width: 768px) {
+    a {
+      margin: 0;
+      padding: 0;
+    }
     .hamburger {
       display: flex;
     }

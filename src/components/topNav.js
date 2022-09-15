@@ -18,7 +18,9 @@ function Top() {
   return (
     <>
       <TopNav className={`header ${topNav ? "active" : ""}`}>
-        <img src={Logo} alt="Logo" />
+        <Link to="/" onClick={handleNav}>
+          <img src={Logo} alt="Logo" />
+        </Link>
         <div
           className={`hamburger ${menu ? "active" : ""}`}
           onClick={handleMenu}
