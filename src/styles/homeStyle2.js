@@ -73,7 +73,7 @@ export const ApiSection = styled.section`
       position: relative;
       overflow: scroll;
       width: 100%;
-      height: 50vh;
+      min-height: 40vh;
     }
     .flex-box {
       align-items: center;
@@ -88,9 +88,6 @@ export const ApiSection = styled.section`
         100% {
           transform: translateX(-73%);
         }
-      }
-      :hover {
-        animation-play-state: paused;
       }
     }
   }

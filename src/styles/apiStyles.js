@@ -161,6 +161,9 @@ export const Mainer = styled.div`
     }
     .search-box {
       width: 40rem;
+      align-items: center;
+      height: 50px;
+      border-radius: 10px;
       padding: 1.2rem;
       display: flex;
       gap: 0.8rem;
@@ -272,7 +275,7 @@ export const Mainer = styled.div`
         }
         .apibox {
           img {
-            transform: translate(-10%, 30%);
+            transform: translate(-10%, 8%);
           }
         }
       }

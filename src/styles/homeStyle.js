@@ -65,12 +65,12 @@ export const FirstSection = styled.section`
 export const Carousel = styled.div`
   display: flex;
   justify-content: center;
-  gap: 0.5rem;
+  gap: 1rem;
   align-items: center;
   margin-top: -4rem;
   .line {
     height: 0.5rem;
-    width: 2.8rem;
+    width: 4rem;
     background-color: #fff;
     opacity: 0.9;
     border-radius: 10px;
@@ -86,6 +86,10 @@ export const Carousel = styled.div`
   }
   @media (max-width: 768px) {
     margin-top: -6rem;
+
+    .line {
+      width: 3rem;
+    }
   }
 `;
 
