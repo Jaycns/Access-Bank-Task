@@ -73,7 +73,7 @@ export const ApiSection = styled.section`
       position: relative;
       overflow: scroll;
       width: 100%;
-      min-height: 40vh;
+      min-height: 50vh;
     }
     .flex-box {
       align-items: center;

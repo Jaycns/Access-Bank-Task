@@ -1,0 +1,72 @@
+==Release notes for Effra, Effra VF==
+
+Compiler of release notes: Dalton Maag
+Designer: Dalton Maag
+Designer URL: daltonmaag.com
+
+Release date: 2022-05-27
+
+Change log:
+- v3.000: 
+    - Converted to variable fonts.
+    - Extended weight range from Hairline to Black, with adjustments made to all weights for family harmony.
+        There is no 1:1 match in value for the static fonts of the original Effra (v2.031) to Effra v3.000.
+        The closest static weight matches for the original (v2.031) in v3.000 are:
+            v2.031           v3.000
+            Effra Light   -> Effra Thin
+            Effra Regular -> Effra Regular
+            Effra Medium  -> Effra SemiBold
+            Effra Bold    -> Effra Bold
+            Effra Heavy   -> Effra XBold
+        The original (v2.031) weights (but not their metrics) can be matched exactly in the variable font:
+            Effra Light   -> Effra VF wght=245
+            Effra Regular -> Effra VF wght=435
+            Effra Medium  -> Effra VF wght=581
+            Effra Bold    -> Effra VF wght=700
+            Effra Heavy   -> Effra VF wght=781
+    - Updated glyph set to reflect our current standards.
+- v2.031: Fixed NameID 3 to reflect current version.
+- v2.030: Updated vertical metrics with the new strategy.
+- v2.030: Updated vertical metrics with the new strategy.
+- v2.020: Added CFF-based OTFs for all weights and styles.
+- v2.010: Added anchor support for Latin, Cyrillic and Greek.
+
+
+Basic information
+1 Font name:
+    - Static: Effra
+    - Variable: Effra VF
+2 TrueType Version record: 3.000
+3 Character Set: Dalton Maag Library Set, Cyrillic, Greek, Arabic
+4 Supported scripts: Latin, Cyrillic, Greek, Arabic
+5 Number of glyphs:
+    - Static: 1473
+    - Variable: 1561
+6 Static weights: Hairline, Thin, Light, Regular, Medium, SemiBold, Bold, XBold, Black
+7 Usage: Text and Display
+8 Number of axes: 2
+9 Axes:
+    - Weight
+        tag: wght
+        range: 100 (Hairline) - 900 (Black)
+    - Italic
+        tag: ital
+        range: 0 (Upright) - 1 (Italic)
+9 Named instances: Hairline, Hairline Italic, Thin, Thin Italic, Light, Light Italic, Regular (default instance), Italic, Medium, Medium Italic, SemiBold, SemiBold Italic, Bold, Bold Italic, XBold, XBold Italic, Black, Black Italic, 
+
+
+Technology
+1 File formats: 
+    - Static: The files have been delivered in the TrueType-based OpenType format, for use in all major Operating Systems, and also as TTF for use in apps, and in web font format: WOFF; WOFF2.
+    - Variable: The files have been delivered as variable fonts in the TrueType-based OpenType format, for use in all major Operating Systems, and also as TTF for use in apps, and in web font format: WOFF2.
+2 Embedding settings: Editing of the document is allowed (editable mode); subsetting is allowed.
+3 Screen optimization information: PixelFix CTAA screen optimization technology.
+4 Default numerals: Tabular. Proportional numerals accessible via OpenType features.
+
+Other Information
+The fonts contain the following OpenType Stylistic Sets:
+    - ss01: Disable Dutch ij
+    - ss02: alternate @
+    - ss03: Latin numbers
+    - ss04: Urdu numbers
+    - ss05: Vowel insertion above name of God
