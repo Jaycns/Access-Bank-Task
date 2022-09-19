@@ -6,6 +6,7 @@ export const ApiSection = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 8vw;
   gap: 4rem;
   box-shadow: 0px 10px 15px 15px rgba(0, 0, 0, 0.1);
   @media (max-width: 768px) {
@@ -23,15 +24,15 @@ export const ApiSection = styled.section`
   }
   .flex-box {
     display: flex;
-    justify-content: center;
-    gap: 6rem;
+    justify-content: space-between;
+    gap: 2rem;
   }
   .view-box {
     color: #a4c519;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-self: center;
     gap: 0.4rem;
+    width: 8rem;
     cursor: pointer;
     .hover {
       display: none;
@@ -58,6 +59,12 @@ export const ApiSection = styled.section`
       margin: 2rem;
     }
   }
+  @media (max-width: 1100px) {
+    .flex-box {
+      display: grid;
+      grid-template-columns: auto auto;
+    }
+  }
   @media (max-width: 768px) {
     .header {
       font-size: 24px;
@@ -78,6 +85,7 @@ export const ApiSection = styled.section`
     .flex-box {
       align-items: center;
       position: absolute;
+      display: flex;
       z-index: 600;
       gap: 1.6rem;
       animation: scrolls 15s infinite 2s alternate;

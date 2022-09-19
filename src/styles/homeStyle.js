@@ -358,7 +358,7 @@ export const Card = styled.div`
 
 export const ThirdSection = styled.section`
   width: 100%;
-  height: 70vh;
+  min-height: 70vh;
   padding: 6rem;
   margin: 0 auto;
   text-align: center;
@@ -425,6 +425,12 @@ export const ThirdSection = styled.section`
       width: 100px;
     }
   }
+  @media (max-width: 1100px) {
+    .flex-box {
+      display: grid;
+      grid-template-columns: auto auto;
+    }
+  }
   @media (max-width: 768px) {
     height: auto;
     padding: 2rem;
@@ -452,13 +458,14 @@ export const ThirdSection = styled.section`
     .flex-box {
       flex-direction: column;
       gap: 4rem;
+      display: flex;
     }
   }
 `;
 export const LastSection = styled.section`
   position: relative;
   background-color: #f5821f;
-  height: 60vh;
+  min-height: 60vh;
   overflow: hidden;
   display: flex;
   justify-content: center;

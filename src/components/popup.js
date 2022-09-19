@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import AppContext from "../context/context";
 import "../App.scss";
 import { MdAttachFile, MdOutlineEmojiEmotions } from "react-icons/md";
@@ -7,6 +7,23 @@ import { BsXLg } from "react-icons/bs";
 
 function Popup() {
   const { handleChatboxClose } = useContext(AppContext);
+  const [chat, setChat] = useState("");
+  const [message, setMessage] = useState([]);
+  const handleChat = (e) => {
+    setChat(e.target.value);
+    console.log({ input: e.target.value });
+  };
+
+  const handleMessage = (e) => {
+    try {
+      setMessage([...message, chat]);
+      setChat("");
+      e.preventDefault();
+      console.log({ Message: message });
+    } catch (e) {
+      console.log({ error: e });
+    }
+  };
   return (
     <div className="popup-container">
       <div className="box">
@@ -19,16 +36,22 @@ function Popup() {
         </span>
       </div>
       <div className="type">
-        <div className="replybox">
-          <input type="text" className="reply" placeholder="Reply here..." />
-        </div>
+        <form className="replybox" action="no action" onSubmit={handleMessage}>
+          <input
+            type="text"
+            className="reply"
+            placeholder="Reply here..."
+            value={chat}
+            onChange={handleChat}
+          />
+        </form>
         <div className="extra">
           <MdAttachFile className="icon" />
-          <MdOutlineEmojiEmotions className="icon" />
+          <MdOutlineEmojiEmotions className="icon" onClick={handleMessage} />
         </div>
       </div>
       <div className="chat">
-        <div className="chat-container">
+        <div className="admin-container">
           <div className="circle"></div>
           <div className="msbox">
             <h2>Freshchat</h2>
@@ -38,6 +61,13 @@ function Popup() {
             </p>
           </div>
         </div>
+
+        {message.map((item) => (
+          <div className="user-container">
+            <p>{item}</p>
+            <div className="circle"></div>
+          </div>
+        ))}
       </div>
     </div>
   );

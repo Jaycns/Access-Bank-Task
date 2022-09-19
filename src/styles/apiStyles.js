@@ -279,6 +279,11 @@ export const Mainer = styled.div`
           }
         }
       }
+      @media (max-width: 280px) {
+        .apibox {
+          width: 160px;
+        }
+      }
     }
   }
 `;
