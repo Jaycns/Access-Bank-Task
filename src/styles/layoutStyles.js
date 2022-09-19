@@ -295,8 +295,8 @@ export const TopNav = styled.div`
   }
   @media (max-width: 1300px) {
     img {
-      width: 100px;
-      height: 38px;
+      width: 150px;
+      height: 48px;
     }
   }
   @media (max-width: 768px) {
@@ -308,8 +308,8 @@ export const TopNav = styled.div`
       display: flex;
     }
     img {
-      width: 100px;
-      height: 35px;
+      width: 120px;
+      height: 45px;
     }
   }
   @media (max-width: 328px) {
