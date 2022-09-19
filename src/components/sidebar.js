@@ -29,8 +29,8 @@ function Sidebar() {
             className={activeNav === "/apis" ? "active" : ""}
           >
             Apis
+            <AiOutlineRight className="icon" />
           </Link>
-          <AiOutlineRight className="icon" />
         </div>
         <div className="box">
           <Link
@@ -40,8 +40,8 @@ function Sidebar() {
             className={activeNav === "/products" ? "active" : ""}
           >
             Products
+            <AiOutlineRight className="icon" />
           </Link>
-          <AiOutlineRight className="icon" />
         </div>
         <div className="box">
           <Link
@@ -51,8 +51,8 @@ function Sidebar() {
             className={activeNav === "/apps" ? "active" : ""}
           >
             Applications
+            <AiOutlineRight className="icon" />
           </Link>
-          <AiOutlineRight className="icon" />
         </div>
         <div className="box">
           <Link
@@ -62,8 +62,8 @@ function Sidebar() {
             className={activeNav === "/forum" ? "active" : ""}
           >
             Forum
+            <AiOutlineRight className="icon" />
           </Link>
-          <AiOutlineRight className="icon" />
         </div>
         <div className="box signin">
           <p onClick={handleLoginOpen}>Sign In</p>

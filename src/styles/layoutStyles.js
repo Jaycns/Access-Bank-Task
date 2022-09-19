@@ -383,6 +383,9 @@ export const SideBar = styled.div`
     }
     a {
       text-decoration: none;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
       color: #fff;
     }
     .active {
