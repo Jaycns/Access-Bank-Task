@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import Top from "./topNav";
 import LoginModal from "../components/loginmodal";
-import SignUpModal from "../components/signupmodal";
 import { Modal } from "@mui/material";
 import Sidebar from "./sidebar";
 import SignPop from "./signpop";
@@ -9,8 +8,7 @@ import AppContext from "../context/context";
 import "../styles/layout.scss";
 
 const Layout = ({ children }) => {
-  const { modal, handleClose, handleLoginClose, loginModal } =
-    useContext(AppContext);
+  const { modal, handleLoginClose, loginModal } = useContext(AppContext);
   return (
     <>
       <div className="layout">
