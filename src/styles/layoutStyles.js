@@ -9,6 +9,7 @@ export const ModalBox = styled.div`
   z-index: 99;
   background: #f6f7f3;
   transform: translate(100%, 20%);
+  border-radius: 10px;
   .icon {
     position: absolute;
     font-size: 24px;
@@ -195,7 +196,7 @@ export const ButtonFill = styled.button`
   color: #fff;
   letter-spacing: 4px;
   text-transform: uppercase;
-  padding: 0.8rem 1.2rem;
+  padding: 1rem 1.2rem;
   width: ${({ width }) => width || ""};
   border: none;
   position: relative;
@@ -226,10 +227,10 @@ export const ButtonFill = styled.button`
   @media (max-width: 1300px) {
     font-size: 11px;
     letter-spacing: 2px;
-    padding: 0.6rem 1rem;
+    padding: 1rem;
   }
   @media (max-width: 768px) {
-    padding: 0.6rem 0.8rem;
+    padding: .8rem 1rem;
     font-size: 11px;
     letter-spacing: 2px;
   }

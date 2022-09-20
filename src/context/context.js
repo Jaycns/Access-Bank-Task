@@ -9,13 +9,11 @@ export const AppProvider = (props) => {
   const handleOpen = () => {
     setModal(true);
     setLoginModal(false);
-    handleMenuClose();
   };
   const handleClose = () => setModal(false);
   const handleLoginOpen = () => {
     setLoginModal(true);
     setModal(false);
-    handleMenuClose();
   };
   const handleLoginClose = () => setLoginModal(false);
   const [carousel, setCarousel] = useState(0);
@@ -63,6 +61,7 @@ export const AppProvider = (props) => {
   const [menu, setMenu] = useState(false);
   const handleMenu = () => {
     setMenu(!menu);
+    handleClose();
   };
   const handleMenuClose = () => {
     setMenu(false);

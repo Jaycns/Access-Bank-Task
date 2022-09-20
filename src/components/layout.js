@@ -4,18 +4,20 @@ import LoginModal from "../components/loginmodal";
 import SignUpModal from "../components/signupmodal";
 import { Modal } from "@mui/material";
 import Sidebar from "./sidebar";
+import SignPop from "./signpop";
 import AppContext from "../context/context";
 import "../styles/layout.scss";
 
 const Layout = ({ children }) => {
-  const { modal, handleClose, handleLoginClose, loginModal} =
+  const { modal, handleClose, handleLoginClose, loginModal } =
     useContext(AppContext);
   return (
     <>
       <div className="layout">
         <Top />
         <Sidebar />
-        <Modal
+        {modal && <SignPop />}
+        {/* <Modal
           open={modal}
           onClose={handleClose}
           aria-labelledby="modal-modal-title"
@@ -24,7 +26,7 @@ const Layout = ({ children }) => {
           <div>
             <SignUpModal onClose={handleClose} />
           </div>
-        </Modal>
+        </Modal> */}
         <Modal
           open={loginModal}
           onClose={handleLoginClose}
