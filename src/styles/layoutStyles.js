@@ -193,7 +193,7 @@ export const ButtonFill = styled.button`
   outline: none;
   background: ${({ bg }) => bg || " #f5821f "};
   border-radius: ${({ bd }) => bd || "5px"};
-  height: ${({ h }) => h || "auto"};
+  height: ${({ h }) => h || "50px"};
   color: #fff;
   letter-spacing: 4px;
   text-transform: uppercase;

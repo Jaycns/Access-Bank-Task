@@ -13,7 +13,7 @@ export const SignForm = styled.div`
   box-shadow: 0px 4px 40px rgba(29, 39, 88, 0.4);
   @media (max-width: 1300px) {
     right: 25%;
-    top: 8%;
+    top: 2%;
     padding: 3rem;
   }
 
