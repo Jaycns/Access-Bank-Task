@@ -50,7 +50,7 @@ export const SignForm = styled.div`
   }
   @media (max-width: 768px) {
     right: 0%;
-    top: 8%;
+    top: 10%;
     width: 100%;
     border-radius: 0;
     padding: 2rem;

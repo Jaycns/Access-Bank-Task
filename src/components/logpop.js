@@ -18,7 +18,7 @@ function LogIn() {
       <div className="shadow">
         <h1>Sign in to your account.</h1>
         <p>
-          Don't have an account? <span onClick={handleOpen}>Sign up now</span>
+          Already have one? <span onClick={handleOpen}>Sign up now</span>
         </p>
         <div className="flex-box">
           <div className="google-box">
