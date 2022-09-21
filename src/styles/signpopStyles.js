@@ -48,7 +48,7 @@ export const SignForm = styled.div`
       margin-bottom: 1.6rem;
     }
     p {
-      margin-bottom: 2.2rem;
+      margin-bottom: 2rem;
     }
   }
   @media (max-width: 768px) {
@@ -97,6 +97,9 @@ export const SignForm = styled.div`
       padding: 1.2rem 1.6rem;
       border: 1px solid #767779;
       border-radius: 6px;
+      @media (max-width: 1300px) {
+        padding: 0.98rem 1.2rem;
+      }
       @media (max-width: 768px) {
         padding: 0.72rem 1.2rem;
       }
