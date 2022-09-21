@@ -193,6 +193,7 @@ export const ButtonFill = styled.button`
   outline: none;
   background: ${({ bg }) => bg || " #f5821f "};
   border-radius: ${({ bd }) => bd || "5px"};
+  height: ${({ h }) => h || "auto"};
   color: #fff;
   letter-spacing: 4px;
   text-transform: uppercase;
@@ -209,6 +210,7 @@ export const ButtonFill = styled.button`
     height: 50px;
     background-color: rgba(255, 255, 255, 0.1);
     left: 0px;
+    height: ${({ h }) => h || "auto"};
     top: 0;
     transform: translateX(100%);
     transition: transform 0.3s ease;
@@ -221,7 +223,7 @@ export const ButtonFill = styled.button`
   :disabled {
     ::before {
       transform: translateX(0%);
-      background-color: rgba(255, 255, 255, 0.8);
+      background-color: rgba(255, 255, 255, 0.4);
     }
   }
   @media (max-width: 1300px) {
@@ -230,7 +232,7 @@ export const ButtonFill = styled.button`
     padding: 1rem;
   }
   @media (max-width: 768px) {
-    padding: .8rem 1rem;
+    padding: 0.8rem 1rem;
     font-size: 11px;
     letter-spacing: 2px;
   }

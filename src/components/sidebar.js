@@ -65,8 +65,8 @@ function Sidebar() {
             <AiOutlineRight className="icon" />
           </Link>
         </div>
-        <div className="box signin">
-          <p onClick={handleLoginOpen}>Sign In</p>
+        <div className="box signin" onClick={handleLoginOpen}>
+          <p>Sign In</p>
           <AiOutlineRight className="icon" />
         </div>
       </SideBar>

@@ -62,6 +62,7 @@ export const AppProvider = (props) => {
   const handleMenu = () => {
     setMenu(!menu);
     handleClose();
+    handleLoginClose();
   };
   const handleMenuClose = () => {
     setMenu(false);

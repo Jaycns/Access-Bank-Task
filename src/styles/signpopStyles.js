@@ -14,6 +14,7 @@ export const SignForm = styled.div`
   @media (max-width: 1300px) {
     right: 25%;
     top: 8%;
+    padding: 3rem;
   }
 
   .icon {
@@ -27,20 +28,23 @@ export const SignForm = styled.div`
   h1 {
     font-size: 40px;
     font-weight: medium;
-    margin-bottom: 2rem;
+    margin-bottom: 1.6rem;
   }
   p {
     font-size: 16px;
     font-weight: 500;
-    margin-bottom: 4rem;
+    margin-bottom: 3.2rem;
     color: #000;
     opacity: 0.8;
 
     span {
       text-decoration: underline;
       color: #ef7d00;
+      cursor: pointer;
     }
-    @media (max-width: 1300px) {
+  }
+  @media (max-width: 1300px) {
+    h1 {
       margin-bottom: 2rem;
     }
   }
@@ -94,6 +98,7 @@ export const SignForm = styled.div`
       display: flex;
       justify-content: space-between;
       align-items: center;
+      cursor: pointer;
       img {
         width: 24px;
       }
@@ -127,19 +132,59 @@ export const SignForm = styled.div`
         width: 100%;
       }
     }
+    .holder.log {
+      height: auto;
+    }
     .holder {
       display: flex;
       flex-direction: column;
-      gap: 2rem;
+      gap: 2.2rem;
       position: relative;
       overflow: scroll;
-      height: 25vh;
+      height: 30vh;
+      @media (max-width: 1300px) {
+        height: 36vh;
+      }
       p {
         margin: 0;
       }
+      .btn {
+      }
       input {
         font-size: 18px;
-        transition: all 0.3s ease;
+        outline: none;
+        transition: all 0.1s ease;
+        :focus {
+          border: 3px solid #4180ff;
+        }
+      }
+      .password {
+        display: flex;
+        align-items: center;
+        position: relative;
+        .eye {
+          margin-left: -2rem;
+          font-size: 20px;
+        }
+      }
+      .pass-box {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: -1rem;
+        span {
+          color: #ef7d00;
+          font-size: 16px;
+        }
+        .check-box {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          input {
+            width: 20px;
+          }
+        }
       }
       @media (max-width: 768px) {
         height: auto;
@@ -147,6 +192,20 @@ export const SignForm = styled.div`
         justify-content: space-between;
         input {
           font-size: 14px;
+        }
+        button {
+          height: 50px !important;
+        }
+        .pass-box {
+          margin-top: 0rem;
+          span {
+            font-size: 10px;
+          }
+          .check-box {
+            p {
+              font-size: 10px;
+            }
+          }
         }
       }
     }

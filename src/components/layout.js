@@ -1,40 +1,20 @@
 import React, { useContext } from "react";
 import Top from "./topNav";
-import LoginModal from "../components/loginmodal";
-import { Modal } from "@mui/material";
 import Sidebar from "./sidebar";
-import SignPop from "./signpop";
+import SignUp from "./signpop";
+import LogIn from "./logpop";
 import AppContext from "../context/context";
 import "../styles/layout.scss";
 
 const Layout = ({ children }) => {
-  const { modal, handleLoginClose, loginModal } = useContext(AppContext);
+  const { modal, loginModal } = useContext(AppContext);
   return (
     <>
       <div className="layout">
         <Top />
         <Sidebar />
-        {modal && <SignPop />}
-        {/* <Modal
-          open={modal}
-          onClose={handleClose}
-          aria-labelledby="modal-modal-title"
-          aria-describedby="modal-modal-description"
-        >
-          <div>
-            <SignUpModal onClose={handleClose} />
-          </div>
-        </Modal> */}
-        <Modal
-          open={loginModal}
-          onClose={handleLoginClose}
-          aria-labelledby="modal-modal-title"
-          aria-describedby="modal-modal-description"
-        >
-          <div>
-            <LoginModal onClose={handleLoginClose} />
-          </div>
-        </Modal>
+        {modal && <SignUp />}
+        {loginModal && <LogIn />}
       </div>
       <main>{children}</main>
     </>
