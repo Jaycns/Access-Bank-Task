@@ -4,15 +4,15 @@ export const SignForm = styled.div`
   width: 40rem;
   position: fixed;
   z-index: 1000;
-  transform: translate(0%, 0%);
-  right: 33%;
+  right: 0%;
   top: 3%;
+  left: 0%;
+  margin: auto;
   border-radius: 10px;
   padding: 4rem;
   background-color: #fff;
   box-shadow: 0px 4px 40px rgba(29, 39, 88, 0.4);
   @media (max-width: 1300px) {
-    right: 25%;
     top: 2%;
     padding: 3rem;
   }
@@ -45,7 +45,10 @@ export const SignForm = styled.div`
   }
   @media (max-width: 1300px) {
     h1 {
-      margin-bottom: 2rem;
+      margin-bottom: 1.6rem;
+    }
+    p {
+      margin-bottom: 2.2rem;
     }
   }
   @media (max-width: 768px) {
@@ -77,6 +80,10 @@ export const SignForm = styled.div`
     display: flex;
     flex-direction: column;
     gap: 3rem;
+    @media (max-width: 1300px) {
+      gap: 1.6rem;
+      justify-content: space-between;
+    }
     @media (max-width: 768px) {
       gap: 1rem;
       justify-content: space-between;
@@ -142,8 +149,10 @@ export const SignForm = styled.div`
       position: relative;
       overflow: scroll;
       height: 30vh;
+
       @media (max-width: 1300px) {
-        height: 36vh;
+        height: 30vh;
+        gap: 1.2rem;
       }
       p {
         margin: 0;
@@ -175,6 +184,9 @@ export const SignForm = styled.div`
         justify-content: space-between;
         align-items: center;
         margin-top: -1rem;
+        @media (max-width: 1300px) {
+          margin-top: -0.5rem;
+        }
         span {
           color: #ef7d00;
           font-size: 16px;
