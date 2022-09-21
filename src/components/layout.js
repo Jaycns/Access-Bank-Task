@@ -7,7 +7,7 @@ import AppContext from "../context/context";
 import "../styles/layout.scss";
 
 const Layout = ({ children }) => {
-  const { modal, loginModal } = useContext(AppContext);
+  const { modal, loginModal, closeAll } = useContext(AppContext);
   return (
     <>
       <div className="layout">
@@ -16,7 +16,7 @@ const Layout = ({ children }) => {
         {modal && <SignUp />}
         {loginModal && <LogIn />}
       </div>
-      <main>{children}</main>
+      <main onClick={closeAll}>{children}</main>
     </>
   );
 };

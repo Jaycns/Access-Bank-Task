@@ -3,10 +3,10 @@ import styled from "styled-components";
 export const SignForm = styled.div`
   width: 40rem;
   position: fixed;
-  z-index: 900;
+  z-index: 1000;
   transform: translate(0%, 0%);
   right: 33%;
-  top: 10%;
+  top: 3%;
   border-radius: 10px;
   padding: 4rem;
   background-color: #fff;
@@ -148,14 +148,16 @@ export const SignForm = styled.div`
       p {
         margin: 0;
       }
-      .btn {
+      button {
+        font-size: 16px;
+        padding: 1rem;
       }
       input {
         font-size: 18px;
         outline: none;
         transition: all 0.1s ease;
         :focus {
-          border: 3px solid #4180ff;
+          border: 2px solid #4180ff;
         }
       }
       .password {
@@ -195,6 +197,7 @@ export const SignForm = styled.div`
         }
         button {
           height: 50px !important;
+          font-size: 14px;
         }
         .pass-box {
           margin-top: 0rem;

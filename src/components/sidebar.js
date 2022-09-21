@@ -5,22 +5,11 @@ import { SideBar } from "../styles/layoutStyles";
 import { AiOutlineRight } from "react-icons/ai";
 import { Link } from "react-router-dom";
 function Sidebar() {
-  const { menu, activeNav, handleNav, handleLoginOpen } =
+  const { menu, activeNav, handleNav, handleLoginOpen, closeAll } =
     useContext(AppContext);
   return (
     <>
       <SideBar className={menu ? "" : "sidebar"}>
-        {/* <div className="box">
-          <Link
-            to="/"
-            id="/"
-            onClick={handleNav}
-            className={activeNav === "/" ? "active" : ""}
-          >
-            Home
-          </Link>{" "}
-          <AiOutlineRight className="icon" />
-        </div> */}
         <div className="box">
           <Link
             to="/apis"
@@ -70,7 +59,7 @@ function Sidebar() {
           <AiOutlineRight className="icon" />
         </div>
       </SideBar>
-      {menu && <div className="wrapper" />}
+      {menu && <div className="wrapper" onClick={closeAll} />}
     </>
   );
 }

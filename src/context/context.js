@@ -15,6 +15,17 @@ export const AppProvider = (props) => {
     setLoginModal(true);
     setModal(false);
   };
+  const closeAll = () => {
+    if (modal) {
+      handleClose();
+    }
+    if (loginModal) {
+      handleLoginClose();
+    }
+    if (menu) {
+      handleMenu();
+    }
+  };
   const handleLoginClose = () => setLoginModal(false);
   const [carousel, setCarousel] = useState(0);
   const nextSlide = () => {
@@ -85,6 +96,7 @@ export const AppProvider = (props) => {
     handleMenu,
     handleMenuClose,
     handleNav,
+    closeAll,
   };
   return (
     <AppContext.Provider

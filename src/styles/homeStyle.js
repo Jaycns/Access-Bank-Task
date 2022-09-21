@@ -130,6 +130,7 @@ export const Button = styled.button`
   outline: none;
   background: transparent;
   border-radius: ${({ bd }) => bd || "5px"};
+  height: ${({ h }) => h || "50px"};
   color: ${({ bg }) => bg || "#f5821f"};
   letter-spacing: 4px;
   text-transform: uppercase;
