@@ -210,7 +210,7 @@ export const ButtonFill = styled.button`
     height: 50px;
     background-color: rgba(255, 255, 255, 0.1);
     left: 0px;
-    height: ${({ h }) => h || "auto"};
+    height: ${({ h }) => h || "50px"};
     top: 0;
     transform: translateX(100%);
     transition: transform 0.3s ease;

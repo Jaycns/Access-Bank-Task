@@ -7,7 +7,11 @@
   height: 100vh;
   width: 100%;
 }
+.wrapper.sign {
+  top: 0%!important;
+  z-index: 999;
+}
 .sidebar {
   transform: translateX(100%);
-  transition: transform .6s linear;
+  transition: transform 0.6s linear;
 }
