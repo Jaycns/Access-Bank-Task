@@ -26,6 +26,17 @@ export const ApiSection = styled.section`
     display: flex;
     justify-content: space-between;
     gap: 2rem;
+    .gif {
+      width: 300px;
+      height: 305px;
+      display: none;
+      position: relative;
+      overflow: hidden;
+      img {
+        width: 300px;
+        height: 305px;
+      }
+    }
   }
   .view-box {
     color: #a4c519;
@@ -88,13 +99,23 @@ export const ApiSection = styled.section`
       display: flex;
       z-index: 600;
       gap: 1.6rem;
-      animation: scrolls 15s infinite 2s alternate;
+      animation: scrolls 8s infinite .8s alternate;
       @keyframes scrolls {
         0% {
           transform: translateX(1%);
         }
         100% {
-          transform: translateX(-73%);
+          transform: translateX(-75%);
+        }
+      }
+      .gif {
+        width: 100px;
+        height: 105px;
+        display: block;
+
+        img {
+          width: 100px;
+          height: 105px;
         }
       }
     }

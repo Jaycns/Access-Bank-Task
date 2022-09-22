@@ -20,6 +20,7 @@ import One from "../images/debit-card.gif";
 import Two from "../images/create-order.gif";
 import Three from "../images/money.gif";
 import Four from "../images/bal_inq.gif";
+import nextGif from "../images/next.gif";
 import first from "../images/test.svg";
 import second from "../images/subscribe.svg";
 import third from "../images/integrate.svg";
@@ -208,6 +209,9 @@ function Home() {
                 </div>
               </div>
             </ApiCard>
+            <div className="gif">
+              <img src={nextGif} alt="gif" className="next" />
+            </div>
           </div>
         </div>
         <div className="view-box">

@@ -8,8 +8,11 @@
   width: 100%;
 }
 .wrapper.sign {
-  top: 0%!important;
+  top: 0%;
   z-index: 999;
+  @media screen and (max-width: 768px) {
+    top: 10%;
+  }
 }
 .sidebar {
   transform: translateX(100%);

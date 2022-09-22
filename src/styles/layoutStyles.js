@@ -252,7 +252,7 @@ export const TopNav = styled.div`
   top: 0;
   transition: all 0.3 ease-in-out;
   img {
-    width: 160px;
+    width: 165px;
     height: 57px;
   }
   .hamburger {
@@ -311,7 +311,7 @@ export const TopNav = styled.div`
       display: flex;
     }
     img {
-      width: 120px;
+      width: 124px;
       height: 45px;
     }
   }

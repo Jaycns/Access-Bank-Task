@@ -57,7 +57,8 @@ export const SignForm = styled.div`
     width: 100%;
     border-radius: 0;
     padding: 2rem;
-    height: 100vh;
+    padding-top: 1rem;
+    min-height: 100vh;
     h1 {
       font-size: 24px;
       font-weight: 600;
