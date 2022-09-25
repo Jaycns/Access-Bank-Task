@@ -15,6 +15,7 @@ export const SignForm = styled.div`
   @media (max-width: 1300px) {
     top: 2%;
     padding: 3rem;
+    width: 35rem;
   }
 
   .icon {
@@ -46,6 +47,7 @@ export const SignForm = styled.div`
   @media (max-width: 1300px) {
     h1 {
       margin-bottom: 1.6rem;
+      font-size: 32px;
     }
     p {
       margin-bottom: 2rem;
@@ -119,8 +121,9 @@ export const SignForm = styled.div`
       }
       @media (max-width: 768px) {
         justify-content: center;
-        gap: 1rem;
-
+        gap: 0.5rem;
+        width: 12rem;
+        align-self: center;
         p {
           font-size: 12px;
         }
