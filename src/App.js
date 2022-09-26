@@ -6,6 +6,7 @@ import AppContext from "./context/context";
 
 function App() {
   const { handleChatbox, chatBox, handleChatboxClose } = useContext(AppContext);
+
   return (
     <>
       <Home handleChatbox={handleChatbox} />
