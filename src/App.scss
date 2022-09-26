@@ -10,10 +10,18 @@
   width: 550px;
   min-height: 60vh;
   box-shadow: 0px 6px 8px 4px rgba(0, 0, 0, 0.4);
-  border-radius: 20px;
+  border-radius: 10px;
+  @media screen and (max-width: 1200px) {
+    width: 400px;
+    min-height: 80vh;
+    right: 1%;
+    top: 13%;
+  }
   @media screen and (max-width: 768px) {
     width: 350px;
     right: 1%;
+    min-height: 60vh;
+    top: 30%;
   }
   @media screen and (max-width: 288px) {
     width: 100%;
@@ -21,16 +29,17 @@
   }
   .box {
     width: 100%;
-    height: 16vh;
     background-color: #f5821f;
-    border-radius: 20px 20px 0px 0px;
+    border-radius: 10px 10px 0px 0px;
     color: #fff;
     padding: 1.6rem 2rem;
+    padding-bottom: 6rem;
     display: flex;
     gap: 1.5rem;
     justify-content: space-between;
     @media screen and (max-width: 768px) {
       padding: 2rem 1rem;
+      padding-bottom: 6rem;
     }
     span {
       background-color: rgba(255, 255, 255, 0.4);
@@ -70,6 +79,15 @@
         font-size: 18px;
         font-weight: 200;
         opacity: 0.8;
+      }
+      @media (max-width: 1200px) {
+        gap: 0.3rem;
+        h1 {
+          font-size: 24px;
+        }
+        p {
+          font-size: 16px;
+        }
       }
       @media (max-width: 768px) {
         gap: 0.3rem;
@@ -120,7 +138,7 @@
     overflow: scroll;
     right: 5%;
     bottom: 15%;
-    border-radius: 10px;
+    border-radius: 6px;
     box-shadow: 0px 4px 6px 4px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
@@ -128,9 +146,15 @@
     @media (max-width: 1300px) {
       height: 39vh;
     }
+    @media (max-width: 1200px) {
+      height: 50vh;
+    }
     @media (max-width: 768px) {
       padding: 1.6rem 1.2rem;
-      height: 34vh;
+      height: 39vh;
+    }
+    @media (max-width: 390px) {
+      height: 36vh;
     }
     .admin-container {
       display: flex;

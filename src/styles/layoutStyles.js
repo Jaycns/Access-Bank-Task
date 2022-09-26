@@ -302,14 +302,17 @@ export const TopNav = styled.div`
       height: 48px;
     }
   }
+  @media (max-width: 1000px) {
+    .hamburger {
+      display: flex;
+    }
+  }
   @media (max-width: 768px) {
     a {
       margin: 0;
       padding: 0;
     }
-    .hamburger {
-      display: flex;
-    }
+
     img {
       width: 124px;
       height: 45px;
@@ -356,7 +359,7 @@ export const Nav = styled.div`
       letter-spacing: 2px;
     }
   }
-  @media (max-width: 768px) {
+  @media (max-width: 1000px) {
     display: none;
   }
 `;

@@ -117,6 +117,9 @@ export const ButtonGroup = styled.div`
       font-size: 11px;
     }
   }
+  @media (max-width: 1000px) {
+    display: none;
+  }
   @media (max-width: 768px) {
     gap: 0.8rem;
     p {
