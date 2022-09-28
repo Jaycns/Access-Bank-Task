@@ -36,6 +36,7 @@ export const FirstSection = styled.section`
     bottom: 10%;
     height: 5rem;
     z-index: 1001;
+    cursor: pointer;
   }
   .chatbox {
     animation: jump 2s ease-in-out infinite alternate 5s;

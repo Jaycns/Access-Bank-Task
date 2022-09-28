@@ -15,7 +15,7 @@ import { ButtonFill } from "../styles/layoutStyles";
 
 import { ApiSection, ApiCard } from "../styles/homeStyle2";
 import Logo from "../images/logo.png";
-import Background from "../images/background.png";
+import Background from "../images/background.webp";
 import One from "../images/debit-card.gif";
 import Two from "../images/create-order.gif";
 import Three from "../images/money.gif";
@@ -24,12 +24,12 @@ import nextGif from "../images/next.gif";
 import first from "../images/test.svg";
 import second from "../images/subscribe.svg";
 import third from "../images/integrate.svg";
-import logobg from "../images/Union.png";
+import logobg from "../images/Union.webp";
 import mbox from "../images/mbox.svg";
-import Inq from "../images/Inq.png";
-import Auth from "../images/authenticate.png";
-import Tranx from "../images/tranx.png";
-import Partners from "../images/partners.png";
+import Inq from "../images/Inq.webp";
+import Auth from "../images/authenticate.webp";
+import Tranx from "../images/tranx.webp";
+import Partners from "../images/partners.webp";
 import { AiOutlineRightCircle, AiFillRightCircle } from "react-icons/ai";
 
 const initialSideBarShow = window.matchMedia("(max-width: 780px)").matches;
@@ -261,4 +261,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default React.memo(Home);

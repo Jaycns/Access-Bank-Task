@@ -2,7 +2,6 @@ import React, { useContext, useState } from "react";
 import AppContext from "../context/context";
 import "../App.scss";
 import { MdAttachFile, MdOutlineEmojiEmotions } from "react-icons/md";
-// import { AiOutlineLeft } from "react-icons/ai";
 import { BsXLg } from "react-icons/bs";
 
 function Popup() {

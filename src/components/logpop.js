@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useCallback } from "react";
 import AppContext from "../context/context";
 import { SignForm } from "../styles/signpopStyles";
 import { ButtonFill } from "../styles/layoutStyles";
@@ -9,9 +9,9 @@ import { AiFillEyeInvisible, AiFillEye } from "react-icons/ai";
 function LogIn() {
   const { handleOpen, handleLoginClose, closeAll } = useContext(AppContext);
   const [keyShown, setKeyShown] = useState(false);
-  const handleShown = () => {
+  const handleShown = useCallback(() => {
     setKeyShown(!keyShown);
-  };
+  }, [keyShown]);
   return (
     <>
       <SignForm>

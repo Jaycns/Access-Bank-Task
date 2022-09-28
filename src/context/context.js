@@ -1,4 +1,4 @@
-import { createContext, useState, useEffect } from "react";
+import React, { createContext, useState, useEffect, useCallback } from "react";
 const AppContext = createContext();
 export const AppProvider = (props) => {
   const [modal, setModal] = useState(false);
@@ -6,15 +6,15 @@ export const AppProvider = (props) => {
   const [chatBox, setChatBox] = useState(false);
   const handleChatbox = () => setChatBox(true);
   const handleChatboxClose = () => setChatBox(false);
-  const handleOpen = () => {
+  const handleOpen = useCallback(() => {
     setModal(true);
     setLoginModal(false);
-  };
+  }, [setModal]);
   const handleClose = () => setModal(false);
-  const handleLoginOpen = () => {
+  const handleLoginOpen = useCallback(() => {
     setLoginModal(true);
     setModal(false);
-  };
+  }, [setLoginModal]);
   const closeAll = () => {
     if (modal) {
       handleClose();
@@ -53,37 +53,41 @@ export const AppProvider = (props) => {
   }, []);
   const [topNav, setTopNav] = useState(false);
   const [cardAnimation, setCardAnimation] = useState(false);
-  const navBg = () => {
+  const navBg = useCallback(() => {
     if (window.scrollY >= 50) {
       setTopNav(true);
     } else {
       setTopNav(false);
     }
-  };
+  }, [setTopNav]);
   window.addEventListener("scroll", navBg);
-  const Card = () => {
+  const Card = useCallback(() => {
     if (window.scrollY >= 340) {
       setCardAnimation(true);
     } else if (window.scrollY <= 250) {
       setCardAnimation(false);
     }
-  };
+  }, [setCardAnimation]);
   window.addEventListener("scroll", Card);
   const [menu, setMenu] = useState(false);
-  const handleMenu = () => {
+  const handleMenu = useCallback(() => {
     setMenu(!menu);
     handleClose();
     handleLoginClose();
-  };
-  const handleMenuClose = () => {
+  }, [menu]);
+  const handleMenuClose = useCallback(() => {
     setMenu(false);
-  };
+  }, [setMenu]);
   const [activeNav, setActiveNav] = useState("/");
 
-  const handleNav = (e) => {
-    setActiveNav(e.target.getAttribute("id"));
-    handleMenuClose();
-  };
+  const handleNav = useCallback(
+    (e) => {
+      setActiveNav(e.target.getAttribute("id"));
+      handleMenuClose();
+    },
+    [handleMenuClose]
+  );
+
   const stateActions = {
     handleClose,
     handleOpen,
