@@ -66,7 +66,7 @@ function Home() {
   };
   const containerVariants = {
     hide: {
-      x: "40vw",
+      x: 0,
     },
     show: {
       x: 0,
