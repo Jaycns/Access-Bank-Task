@@ -46,12 +46,12 @@ function Home() {
   } = useContext(AppContext);
   const containerVariant = {
     hide: {
-      x: "-100vw",
+      x: "-40vw",
     },
     show: {
       x: 0,
       transition: {
-        duration: 0.05,
+        duration: 0.1,
         delay: 0,
         type: "ease",
       },
@@ -59,25 +59,25 @@ function Home() {
     exit: {
       x: "-100vw",
       transition: {
-        duration: 0.05,
+        duration: 0.1,
       },
     },
   };
   const containerVariants = {
     hide: {
-      x: "100vw",
+      x: "40vw",
     },
     show: {
       x: 0,
       transition: {
-        duration: 0.05,
+        duration: 0.1,
         delay: 0,
       },
     },
     exit: {
       x: "100vw",
       transition: {
-        duration: 0.05,
+        duration: 0.1,
       },
     },
   };
