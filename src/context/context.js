@@ -36,25 +36,21 @@ export const AppProvider = (props) => {
   };
 
   useEffect(() => {
-    setTimeout(() => {
-      if (carousel === 0) {
+    if (carousel === 0) {
+      const Timer = setInterval(() => {
         setCarousel(1);
-      } else {
-        setCarousel(0);
-      }
-    }, 20000);
+      }, 20000);
+      return () => clearInterval(Timer);
+    }
+     else if (carousel === 1) {
+       const Timer = setInterval(() => {
+         setCarousel(0);
+       }, 20000);
+       return () => clearInterval(Timer);
+     } 
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-  useEffect(() => {
-    setTimeout(() => {
-      if (carousel === 1) {
-        setCarousel(0);
-      } else {
-        setCarousel(1);
-      }
-    }, 30000);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [carousel]);
+
   const [topNav, setTopNav] = useState(false);
   const [cardAnimation, setCardAnimation] = useState(false);
   const navBg = useCallback(() => {
