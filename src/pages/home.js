@@ -31,6 +31,7 @@ import Auth from "../images/authenticate.webp";
 import Tranx from "../images/tranx.webp";
 import Partners from "../images/partners.webp";
 import { AiOutlineRightCircle, AiFillRightCircle } from "react-icons/ai";
+import { motion, AnimatePresence } from "framer-motion";
 
 const initialSideBarShow = window.matchMedia("(max-width: 780px)").matches;
 const Show = window.matchMedia("(max-width: 1300px)").matches;
@@ -43,70 +44,128 @@ function Home() {
     handleChatbox,
     cardAnimation,
   } = useContext(AppContext);
+  const containerVariant = {
+    hide: {
+      x: "-100vw",
+    },
+    show: {
+      x: 0,
+      transition: {
+        duration: 0.05,
+        delay: 0,
+        type: "ease",
+      },
+    },
+    exit: {
+      x: "-100vw",
+      transition: {
+        duration: 0.05,
+      },
+    },
+  };
+  const containerVariants = {
+    hide: {
+      x: "100vw",
+    },
+    show: {
+      x: 0,
+      transition: {
+        duration: 0.05,
+        delay: 0,
+      },
+    },
+    exit: {
+      x: "100vw",
+      transition: {
+        duration: 0.05,
+      },
+    },
+  };
   return (
     <div className="home">
-      {carousel === 0 ? (
-        <FirstSection>
-          <img className="logobg" src={logobg} alt="bg" />
-          <div className="mbox" onClick={handleChatbox}>
-            <img src={mbox} alt="mbox" className="chatbox" />
-          </div>
-          <Main>
-            <h1>
-              Developer API <span>Portal</span>
-            </h1>
-            <p>
-              Building partnerships and embracing opportunities with startups,
-              <br />
-              fintechs and software developers in Africa and beyond.
-            </p>
-            <ButtonFill
-              width={initialSideBarShow ? "8rem" : Show ? "9rem" : "12rem"}
-              onClick={handleOpen}
+      <AnimatePresence exitBeforeEnter>
+        {carousel === 0 ? (
+          <motion.div
+            variants={containerVariant}
+            key={0}
+            initial="hide"
+            animate="show"
+            exit="exit"
+            className=""
+          >
+            <FirstSection>
+              <img className="logobg" src={logobg} alt="bg" />
+              <div className="mbox" onClick={handleChatbox}>
+                <img src={mbox} alt="mbox" className="chatbox" />
+              </div>
+              <Main>
+                <h1>
+                  Developer API <span>Portal</span>
+                </h1>
+                <p>
+                  Building partnerships and embracing opportunities with
+                  startups,
+                  <br />
+                  fintechs and software developers in Africa and beyond.
+                </p>
+                <ButtonFill
+                  width={initialSideBarShow ? "8rem" : Show ? "9rem" : "12rem"}
+                  onClick={handleOpen}
+                >
+                  Get Access
+                </ButtonFill>
+              </Main>
+              <Carousel>
+                <div className="line"></div>
+                <div className="line inactive" onClick={nextSlide}></div>
+              </Carousel>
+            </FirstSection>
+          </motion.div>
+        ) : (
+          <motion.div
+            key={1}
+            variants={containerVariants}
+            initial="hide"
+            animate="show"
+            exit="exit"
+            className=""
+          >
+            <FirstSection
+              style={{
+                backgroundImage: `url(${Background})`,
+                backgroundSize: "cover",
+              }}
             >
-              Get Access
-            </ButtonFill>
-          </Main>
-          <Carousel>
-            <div className="line"></div>
-            <div className="line inactive" onClick={nextSlide}></div>
-          </Carousel>
-        </FirstSection>
-      ) : (
-        <FirstSection
-          style={{
-            backgroundImage: `url(${Background})`,
-            backgroundSize: "cover",
-          }}
-        >
-          <div className="mbox" onClick={handleChatbox}>
-            <img src={mbox} alt="mbox" className="chatbox" />
-          </div>
+              <div className="mbox" onClick={handleChatbox}>
+                <img src={mbox} alt="mbox" className="chatbox" />
+              </div>
 
-          <Main>
-            <h1 className="text">
-              <span>Grow</span>
-              <span>Build</span>
-              <span>Innovate</span>
-            </h1>
-            <p>
-              Enjoy a wide array of the growing number of APIs that can
-              <br />
-              complement your imagination.
-            </p>
-            <ButtonFill
-              width={initialSideBarShow ? "8rem" : Show ? "9rem" : "12rem"}
-              onClick={handleOpen}
-            >
-              Join us
-            </ButtonFill>
-          </Main>
-          <Carousel>
-            <div className="line inactive" onClick={prevSlide}></div>
-            <div className="line"></div>
-          </Carousel>
-        </FirstSection>
-      )}
+              <Main>
+                <h1 className="text">
+                  <span>Grow</span>
+                  <span>Build</span>
+                  <span>Innovate</span>
+                </h1>
+                <p>
+                  Enjoy a wide array of the growing number of APIs that can
+                  <br />
+                  complement your imagination.
+                </p>
+                <ButtonFill
+                  width={initialSideBarShow ? "8rem" : Show ? "9rem" : "12rem"}
+                  onClick={handleOpen}
+                >
+                  Join us
+                </ButtonFill>
+              </Main>
+              <Carousel>
+                <div className="line inactive" onClick={prevSlide}></div>
+                <div className="line"></div>
+              </Carousel>
+            </FirstSection>
+          </motion.div>
+        )}
+      </AnimatePresence>
       <SecondSection>
         <h1 className="header">What to expect</h1>
         <div className={`flex-box ${cardAnimation ? "active" : ""}`}>

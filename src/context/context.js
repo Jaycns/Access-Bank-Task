@@ -36,19 +36,23 @@ export const AppProvider = (props) => {
   };
 
   useEffect(() => {
-    setInterval(() => {
+    setTimeout(() => {
       if (carousel === 0) {
         setCarousel(1);
+      } else {
+        setCarousel(0);
       }
-    }, 40000);
+    }, 20000);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   useEffect(() => {
-    setInterval(() => {
+    setTimeout(() => {
       if (carousel === 1) {
         setCarousel(0);
+      } else {
+        setCarousel(1);
       }
-    }, 40000);
+    }, 30000);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   const [topNav, setTopNav] = useState(false);

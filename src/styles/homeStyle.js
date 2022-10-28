@@ -203,7 +203,6 @@ export const Main = styled.main`
   .text {
     display: flex;
     flex-direction: column;
-
     overflow: hidden;
     animation: slide 20s linear infinite;
   }

@@ -8,6 +8,7 @@ export const ApiSection = styled.section`
   justify-content: center;
   padding: 8vw;
   gap: 4rem;
+  background: white;
   box-shadow: 0px 10px 15px 15px rgba(0, 0, 0, 0.1);
   @media (max-width: 768px) {
     padding: 2rem;
