@@ -201,6 +201,7 @@ export const ButtonFill = styled.button`
   width: ${({ width }) => width || ""};
   border: none;
   position: relative;
+  z-index: 99;
   overflow: hidden;
   transition: all 0.5s ease;
   &::before {

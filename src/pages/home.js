@@ -43,6 +43,7 @@ function Home() {
     handleOpen,
     handleChatbox,
     cardAnimation,
+    handleHamburger,
   } = useContext(AppContext);
   const containerVariant = {
     hide: {
@@ -83,6 +84,9 @@ function Home() {
   };
   return (
     <div className="home">
+      <div className="mbox" onClick={handleChatbox}>
+        <img src={mbox} alt="mbox" className="chatbox" />
+      </div>
       <AnimatePresence exitBeforeEnter>
         {carousel === 0 ? (
           <motion.div
@@ -95,9 +99,6 @@ function Home() {
           >
             <FirstSection>
               <img className="logobg" src={logobg} alt="bg" />
-              <div className="mbox" onClick={handleChatbox}>
-                <img src={mbox} alt="mbox" className="chatbox" />
-              </div>
               <Main>
                 <h1>
                   Developer API <span>Portal</span>
@@ -110,7 +111,10 @@ function Home() {
                 </p>
                 <ButtonFill
                   width={initialSideBarShow ? "8rem" : Show ? "9rem" : "12rem"}
-                  onClick={handleOpen}
+                  onClick={() => {
+                    handleOpen();
+                    handleHamburger();
+                  }}
                 >
                   Get Access
                 </ButtonFill>
@@ -136,10 +140,6 @@ function Home() {
                 backgroundSize: "cover",
               }}
             >
-              <div className="mbox" onClick={handleChatbox}>
-                <img src={mbox} alt="mbox" className="chatbox" />
-              </div>
-
               <Main>
                 <h1 className="text">
                   <span>Grow</span>

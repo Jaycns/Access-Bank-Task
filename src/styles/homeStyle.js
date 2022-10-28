@@ -30,38 +30,6 @@ export const FirstSection = styled.section`
       left: 10%;
     }
   }
-  .mbox {
-    position: fixed;
-    right: 10%;
-    bottom: 10%;
-    height: 5rem;
-    z-index: 1001;
-    cursor: pointer;
-  }
-  .chatbox {
-    animation: jump 2s ease-in-out infinite alternate 5s;
-    position: relative;
-
-    @keyframes jump {
-      0% {
-        transform: translateY(-0%);
-      }
-      50% {
-        transform: translateY(10%);
-      }
-      100% {
-        transform: translateY(-20%);
-      }
-    }
-
-    &:hover {
-      animation-play-state: paused;
-    }
-
-    @media (max-width: 768px) {
-      width: 60px;
-    }
-  }
 `;
 export const Carousel = styled.div`
   display: flex;

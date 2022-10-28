@@ -4,16 +4,22 @@ export const AppProvider = (props) => {
   const [modal, setModal] = useState(false);
   const [loginModal, setLoginModal] = useState(false);
   const [chatBox, setChatBox] = useState(false);
+  const [hamburger, setHamburger] = useState(false);
+  const handleHamburger = useCallback(() => {
+    setHamburger(true);
+  }, [setHamburger]);
   const handleChatbox = () => setChatBox(true);
   const handleChatboxClose = () => setChatBox(false);
   const handleOpen = useCallback(() => {
     setModal(true);
     setLoginModal(false);
+    setHamburger(true);
   }, [setModal]);
   const handleClose = () => setModal(false);
   const handleLoginOpen = useCallback(() => {
     setLoginModal(true);
     setModal(false);
+    setHamburger(true);
   }, [setLoginModal]);
   const closeAll = () => {
     if (modal) {
@@ -41,13 +47,12 @@ export const AppProvider = (props) => {
         setCarousel(1);
       }, 20000);
       return () => clearInterval(Timer);
+    } else if (carousel === 1) {
+      const Timer = setInterval(() => {
+        setCarousel(0);
+      }, 20000);
+      return () => clearInterval(Timer);
     }
-     else if (carousel === 1) {
-       const Timer = setInterval(() => {
-         setCarousel(0);
-       }, 20000);
-       return () => clearInterval(Timer);
-     } 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [carousel]);
 
@@ -70,11 +75,13 @@ export const AppProvider = (props) => {
   }, [setCardAnimation]);
   window.addEventListener("scroll", Card);
   const [menu, setMenu] = useState(false);
+
   const handleMenu = useCallback(() => {
-    setMenu(!menu);
+    setHamburger(!hamburger);
+    hamburger ? setMenu(false) : setMenu(true);
     handleClose();
     handleLoginClose();
-  }, [menu]);
+  }, [hamburger]);
   const handleMenuClose = useCallback(() => {
     setMenu(false);
   }, [setMenu]);
@@ -100,6 +107,7 @@ export const AppProvider = (props) => {
     handleMenu,
     handleMenuClose,
     handleNav,
+    handleHamburger,
     closeAll,
   };
   return (
@@ -113,6 +121,7 @@ export const AppProvider = (props) => {
         loginModal,
         menu,
         activeNav,
+        hamburger,
         ...stateActions,
       }}
     >

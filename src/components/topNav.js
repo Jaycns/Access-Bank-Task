@@ -10,7 +10,7 @@ function Top() {
     handleOpen,
     handleLoginOpen,
     handleMenu,
-    menu,
+    hamburger,
     activeNav,
     handleNav,
   } = useContext(AppContext);
@@ -22,8 +22,8 @@ function Top() {
           <img src={Logo} alt="Logo" />
         </Link>
         <div
-          className={`hamburger ${menu ? "active" : ""}`}
-          onClick={handleMenu}
+          className={`hamburger ${hamburger ? "active" : ""}`}
+          onClick={ handleMenu }
         >
           <span className="line1"></span>
           <span className="line2"></span>
