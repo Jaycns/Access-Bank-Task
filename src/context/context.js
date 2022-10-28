@@ -91,6 +91,7 @@ export const AppProvider = (props) => {
     (e) => {
       setActiveNav(e.target.getAttribute("id"));
       handleMenuClose();
+      setHamburger(false);
     },
     [handleMenuClose]
   );
