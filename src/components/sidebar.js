@@ -23,7 +23,7 @@ function Sidebar() {
         </div>
         <div className="box">
           <Link
-            to="/"
+            to="/products"
             id="/products"
             onClick={handleNav}
             className={activeNav === "/products" ? "active" : ""}
@@ -34,7 +34,7 @@ function Sidebar() {
         </div>
         <div className="box">
           <Link
-            to="/"
+            to="/application"
             id="/apps"
             onClick={handleNav}
             className={activeNav === "/apps" ? "active" : ""}
@@ -45,7 +45,7 @@ function Sidebar() {
         </div>
         <div className="box">
           <Link
-            to="/"
+            to="/forum"
             id="/forum"
             onClick={handleNav}
             className={activeNav === "/forum" ? "active" : ""}

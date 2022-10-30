@@ -113,7 +113,7 @@ export const Mainer = styled.div`
       background: linear-gradient(
         to bottom,
         rgba(217, 217, 217, 0.3) 0%,
-        rgba(217, 217, 217, 0.15) 50%,
+        rgba(217, 217, 217, 0.05) 10%,
         rgba(217, 217, 217, 0) 100%
       );
       backdrop-filter: blur(15px);
@@ -124,7 +124,7 @@ export const Mainer = styled.div`
         background: linear-gradient(
           to bottom,
           rgba(217, 217, 217, 0.6) 0%,
-          rgba(217, 217, 217, 0.4) 50%,
+          rgba(217, 217, 217, 0.2) 10%,
           rgba(217, 217, 217, 0) 100%
         );
       }

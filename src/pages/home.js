@@ -195,7 +195,7 @@ function Home() {
               <h1>Transaction Inquiries</h1>
             </div>
             <p>
-              View your transactions and send payment avidence to <br />
+              View your transactions and send payment evidence to <br />
               vendors and merchants
             </p>
           </Card>

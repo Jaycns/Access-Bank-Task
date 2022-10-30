@@ -100,7 +100,7 @@ export const ApiSection = styled.section`
       display: flex;
       z-index: 600;
       gap: 1.6rem;
-      animation: scrolls 8s infinite .8s alternate;
+      animation: scrolls 8s infinite 0.8s alternate;
       @keyframes scrolls {
         0% {
           transform: translateX(1%);
@@ -198,6 +198,7 @@ export const ApiCard = styled.div`
     .p {
       font-weight: 300;
       font-size: 18px;
+      color: #1d2758;
     }
     :hover {
       .hover {
@@ -210,17 +211,17 @@ export const ApiCard = styled.div`
   }
   &:hover {
     p {
-      color: #1d2758;
       font-weight: 600;
     }
     img {
       ${"" /* width: 600px; */}
-      mix-blend-mode: lighten;
+      filter: grayscale(15%);
+      backdrop-filter: blur(100px);
       transform: scale(1.1);
     }
     .textbox {
       background-color: rgba(255, 255, 255, 0.7);
-      transform: translateY(20%);
+      transform: translateY(10%);
     }
   }
 `;

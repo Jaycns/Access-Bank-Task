@@ -23,7 +23,7 @@ function Top() {
         </Link>
         <div
           className={`hamburger ${hamburger ? "active" : ""}`}
-          onClick={ handleMenu }
+          onClick={handleMenu}
         >
           <span className="line1"></span>
           <span className="line2"></span>
@@ -47,7 +47,7 @@ function Top() {
             Apis
           </Link>
           <Link
-            to="/"
+            to="/products"
             id="/products"
             className={activeNav === "/products" ? "active" : ""}
             onClick={handleNav}
@@ -55,7 +55,7 @@ function Top() {
             Products
           </Link>
           <Link
-            to="/"
+            to="/application"
             id="/applications"
             className={activeNav === "/applications" ? "active" : ""}
             onClick={handleNav}
@@ -63,7 +63,7 @@ function Top() {
             Applications
           </Link>
           <Link
-            to="/"
+            to="/forum"
             id="/forum"
             className={activeNav === "/forum" ? "active" : ""}
             onClick={handleNav}
