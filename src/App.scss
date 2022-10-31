@@ -257,5 +257,106 @@
   min-height: 100vh;
   height: 200vh;
 }
-.api-pop {
+.mainer {
+  margin-top: 6rem;
+  .container {
+    display: grid;
+    width: 100%;
+    justify-content: space-between;
+    grid-template-columns: auto auto auto;
+    @media (max-width: 1200px) {
+      grid-template-columns: auto auto;
+    }
+    @media (max-width: 768px) {
+      grid-template-columns: auto;
+    }
+    gap: 6rem;
+    .card {
+      height: 20vh;
+      width: 20rem;
+      transition: 0.5s;
+      position: relative;
+      cursor: pointer;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      background: linear-gradient(
+        to bottom,
+        rgba(4, 11, 27, 0.1) 10%,
+        rgba(0, 6, 17, 0.4) 50%,
+        rgba(4, 11, 27, 0.8) 100%
+      );
+      border-radius: 10px;
+
+      .line {
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+        border-radius: 10px;
+        &::before {
+          content: "";
+          background-image: linear-gradient(
+            to left,
+            transparent 20%,
+            #f5821f,
+            transparent
+          );
+          position: absolute;
+          width: 40rem;
+          top: 50%;
+          left: 50%;
+          height: 8vh;
+
+          animation: roll 12s linear infinite alternate;
+          @keyframes roll {
+            0% {
+              transform: translate(-50%, -50%) rotate(0deg);
+              background-image: linear-gradient(
+                to bottom,
+                transparent 0%,
+                #f5821f,
+                transparent
+              );
+            }
+            100% {
+              transform: translate(-50%, -50%) rotate(360deg);
+              background: linear-gradient(to left, #10295f, #040b1b);
+            }
+          }
+        }
+        &::after {
+          content: "";
+          border-radius: 10px;
+          position: absolute;
+          inset: 4px;
+          background: linear-gradient(to bottom, #10295f, #040b1b);
+        }
+      }
+      .profile {
+        height: 15vh;
+        width: 10rem;
+        background: #10295f;
+        left: 50%;
+        top: 0px;
+        transform: translate(-50%, -50%);
+        z-index: 5;
+        position: absolute;
+        transition: all 0.5s;
+        img {
+          position: absolute;
+          z-index: 10;
+          width: calc(100% - 10px);
+          height: calc(100% - 10px);
+          object-fit: cover;
+          top: 5px;
+          left: 5px;
+        }
+      }
+      &:hover {
+        height: 40vh;
+        .profile {
+          height: 22vh;
+          width: 12rem;
+        }
+      }
+    }
+  }
 }
