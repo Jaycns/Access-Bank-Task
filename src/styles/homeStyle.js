@@ -59,8 +59,7 @@ export const Carousel = styled.div`
     }
   }
   @media (max-width: 768px) {
-    margin-top: -6rem;
-
+    bottom: 6%;
     .line {
       width: 3rem;
     }
