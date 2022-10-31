@@ -17,7 +17,7 @@ function Application() {
     <div>
       <FirstSection h="auto">
         <Before />
-        <img className="logobg" src={logobg} alt="bg" loading="lazy" />
+        <img className="logobg" src={logobg} alt="bg" />
         <Header className="">
           <img src={Background} alt="bg" />
           <div className="text-box">
@@ -33,7 +33,7 @@ function Application() {
               <div className="line"></div>
               <div className="profile">
                 <div className="img">
-                  <img src={dan} alt="dan" loading="lazy" />
+                  <img src={dan} alt="dan" />
                 </div>
               </div>
             </div>
@@ -41,7 +41,7 @@ function Application() {
               <div className="line"></div>
               <div className="profile">
                 <div className="img">
-                  <img src={dar} alt="dan" loading="lazy" />
+                  <img src={dar} alt="dan" />
                 </div>
               </div>
             </div>
@@ -49,7 +49,7 @@ function Application() {
               <div className="line"></div>
               <div className="profile">
                 <div className="img">
-                  <img src={dani} alt="dan" loading="lazy" />
+                  <img src={dani} alt="dan" />
                 </div>
               </div>
             </div>
@@ -57,7 +57,7 @@ function Application() {
               <div className="line"></div>
               <div className="profile">
                 <div className="img">
-                  <img src={isa} alt="dan" loading="lazy" />
+                  <img src={isa} alt="dan" />
                 </div>
               </div>
             </div>
@@ -65,7 +65,7 @@ function Application() {
               <div className="line"></div>
               <div className="profile">
                 <div className="img">
-                  <img src={dmi} alt="dan" loading="lazy" />
+                  <img src={dmi} alt="dan" />
                 </div>
               </div>
             </div>
@@ -73,7 +73,7 @@ function Application() {
               <div className="line"></div>
               <div className="profile">
                 <div className="img">
-                  <img src={frez} alt="dan" loading="lazy" />
+                  <img src={frez} alt="dan" />
                 </div>
               </div>
             </div>
