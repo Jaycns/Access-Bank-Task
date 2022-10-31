@@ -4,12 +4,18 @@ export const AppProvider = (props) => {
   const [modal, setModal] = useState(false);
   const [loginModal, setLoginModal] = useState(false);
   const [chatBox, setChatBox] = useState(false);
+
+  //Handling of Hmaburger
   const [hamburger, setHamburger] = useState(false);
   const handleHamburger = useCallback(() => {
     setHamburger(true);
   }, [setHamburger]);
+
+  //Handling of ChatBox
   const handleChatbox = () => setChatBox(true);
   const handleChatboxClose = () => setChatBox(false);
+
+  //Handling of Sign-in/Login modals
   const handleOpen = useCallback(() => {
     setModal(true);
     setLoginModal(false);
@@ -21,6 +27,8 @@ export const AppProvider = (props) => {
     setModal(false);
     setHamburger(true);
   }, [setLoginModal]);
+
+  //Closing all modals
   const closeAll = () => {
     if (modal) {
       handleClose();
@@ -33,6 +41,8 @@ export const AppProvider = (props) => {
     }
   };
   const handleLoginClose = () => setLoginModal(false);
+
+  //Handling of Carousel
   const [carousel, setCarousel] = useState(0);
   const nextSlide = () => {
     if (carousel === 0) setCarousel(1);
@@ -40,7 +50,6 @@ export const AppProvider = (props) => {
   const prevSlide = () => {
     if (carousel === 1) setCarousel(0);
   };
-
   useEffect(() => {
     if (carousel === 0) {
       const Timer = setInterval(() => {
@@ -56,6 +65,7 @@ export const AppProvider = (props) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [carousel]);
 
+  //Handling of TopNav transistioning
   const [topNav, setTopNav] = useState(false);
   const [cardAnimation, setCardAnimation] = useState(false);
   const navBg = useCallback(() => {
@@ -76,6 +86,7 @@ export const AppProvider = (props) => {
   window.addEventListener("scroll", Card);
   const [menu, setMenu] = useState(false);
 
+  //Hnadling of Sidebar
   const handleMenu = useCallback(() => {
     setHamburger(!hamburger);
     hamburger ? setMenu(false) : setMenu(true);
@@ -87,6 +98,7 @@ export const AppProvider = (props) => {
   }, [setMenu]);
   const [activeNav, setActiveNav] = useState("/");
 
+  //Closing sidebar
   const handleNav = useCallback(
     (e) => {
       setActiveNav(e.target.getAttribute("id"));

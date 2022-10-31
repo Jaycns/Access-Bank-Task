@@ -87,6 +87,16 @@ function Home() {
       <div className="mbox" onClick={handleChatbox}>
         <img src={mbox} alt="mbox" className="chatbox" />
       </div>
+      <Carousel>
+        <div
+          className={`line ${carousel ? "inactive" : ""}`}
+          onClick={prevSlide}
+        ></div>
+        <div
+          className={`line ${!carousel ? "inactive" : ""}`}
+          onClick={nextSlide}
+        ></div>
+      </Carousel>
       <AnimatePresence exitBeforeEnter>
         {carousel === 0 ? (
           <motion.div
@@ -119,10 +129,6 @@ function Home() {
                   Get Access
                 </ButtonFill>
               </Main>
-              <Carousel>
-                <div className="line"></div>
-                <div className="line inactive" onClick={nextSlide}></div>
-              </Carousel>
             </FirstSection>
           </motion.div>
         ) : (
@@ -158,10 +164,6 @@ function Home() {
                   Join us
                 </ButtonFill>
               </Main>
-              <Carousel>
-                <div className="line inactive" onClick={prevSlide}></div>
-                <div className="line"></div>
-              </Carousel>
             </FirstSection>
           </motion.div>
         )}

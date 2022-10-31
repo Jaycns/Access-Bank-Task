@@ -34,6 +34,11 @@ export const FirstSection = styled.section`
 export const Carousel = styled.div`
   display: flex;
   justify-content: center;
+  position: absolute;
+  z-index: 200;
+  bottom: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   gap: 1rem;
   align-items: center;
   margin-top: -4rem;
